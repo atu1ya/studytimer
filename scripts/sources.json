@@ -1,25 +1,27 @@
 {
-  "_readme": "Channels are listed by handle. update-sets.mjs resolves each handle to its real UC… channel ID on first run and caches it in channelId. A handle that cannot be resolved is logged as a warning and skipped — no ID is ever guessed. Add a channel by appending {name, handle, channelId:null, tags:[]}.",
+  "_readme": "YouTube channel IDs below were resolved from each channel's canonical link and the channel name was checked. Add a channel as {name, handle, channelId:null, tags:[]} and the updater resolves and caches the id on the next run.",
+
+  "_todo": [
+    "HÖR Berlin: @HORBerlin is an unrelated German theatre channel. Real channel not verified — find it, paste the UC… id in.",
+    "Defected: @defected is a dormant 2007 account; @defectedrecords is their retired channel. Current one not verified.",
+    "Interplanetary Criminal, salute, Skream: @interplanetarycriminal / @salute / @skream all 404. They may have no channel under those handles.",
+    "Cercle mostly posts short clips on /videos; their long sets come through but at a lower rate than Boiler Room or Rinse."
+  ],
 
   "youtube": [
-    { "name": "Boiler Room",             "handle": "@boilerroom",             "channelId": null, "tags": ["boiler room", "house", "bass"] },
-    { "name": "HÖR Berlin",              "handle": "@hoer_berlin",            "channelId": null, "tags": ["hör", "techno", "house"] },
-    { "name": "Cercle",                  "handle": "@Cercle",                 "channelId": null, "tags": ["cercle", "house", "melodic"] },
-    { "name": "Mixmag",                  "handle": "@Mixmag",                 "channelId": null, "tags": ["mixmag", "house", "bass"] },
-    { "name": "Keep Hush",               "handle": "@KeepHush",               "channelId": null, "tags": ["keep hush", "uk garage", "bass"] },
-    { "name": "Defected Records",        "handle": "@defected",               "channelId": null, "tags": ["defected", "house"] },
-    { "name": "Rinse FM",                "handle": "@RinseFM",                "channelId": null, "tags": ["rinse", "uk garage", "bass"] },
-    { "name": "The Lot Radio",           "handle": "@TheLotRadio",            "channelId": null, "tags": ["the lot radio", "house"] },
-    { "name": "Sammy Virji",             "handle": "@sammyvirji",             "channelId": null, "tags": ["sammy virji", "uk garage"] },
-    { "name": "KETTAMA",                 "handle": "@kettama",                "channelId": null, "tags": ["kettama", "house"] },
-    { "name": "Josh Baker",              "handle": "@joshbakermusic",         "channelId": null, "tags": ["josh baker", "house"] },
-    { "name": "Prospa",                  "handle": "@prospa",                 "channelId": null, "tags": ["prospa", "dance"] },
-    { "name": "Silva Bumpa",             "handle": "@silvabumpa",             "channelId": null, "tags": ["silva bumpa", "uk garage"] },
-    { "name": "Interplanetary Criminal", "handle": "@interplanetarycriminal", "channelId": null, "tags": ["interplanetary criminal", "uk garage"] },
-    { "name": "Conducta",                "handle": "@conducta",               "channelId": null, "tags": ["conducta", "uk garage"] },
-    { "name": "Chris Lake",              "handle": "@chrislake",              "channelId": null, "tags": ["chris lake", "house"] },
-    { "name": "salute",                  "handle": "@salute",                 "channelId": null, "tags": ["salute", "dance"] },
-    { "name": "Skream",                  "handle": "@skream",                 "channelId": null, "tags": ["skream", "bass"] }
+    { "name": "Boiler Room",   "handle": "@boilerroom",     "channelId": "UCGBpxWJr9FNOcFYA5GkKrMg", "tags": ["boiler room", "house", "bass"] },
+    { "name": "Keep Hush",     "handle": "@KeepHush",       "channelId": "UCQAnY_suiNH0MvdTHk5GiBA", "tags": ["keep hush", "uk garage", "bass"] },
+    { "name": "Rinse FM",      "handle": "@RinseFM",        "channelId": "UCgGfSxNOBkJDtCQ932iQU7Q", "tags": ["rinse", "uk garage", "bass"] },
+    { "name": "Mixmag",        "handle": "@Mixmag",         "channelId": "UCQdCIrTpkhEH5Z8KPsn7NvQ", "tags": ["mixmag", "house", "bass"] },
+    { "name": "Cercle",        "handle": "@Cercle",         "channelId": "UCPKT_csvP72boVX0XrMtagQ", "tags": ["cercle", "house", "melodic"] },
+    { "name": "The Lot Radio", "handle": "@TheLotRadio",    "channelId": "UCJOtExbMu0RqIdiE4nMUPxQ", "tags": ["the lot radio", "house"] },
+    { "name": "Sammy Virji",   "handle": "@sammyvirji",     "channelId": "UCf4EV_7RUlUGp-SgJOfcnlA", "tags": ["sammy virji", "uk garage"] },
+    { "name": "KETTAMA",       "handle": "@kettama",        "channelId": "UCkupaq5MFpC5jsRXU4pvVIA", "tags": ["kettama", "house"] },
+    { "name": "Josh Baker",    "handle": "@joshbakermusic", "channelId": "UCqRZH50fsB1oewilWPTgLaQ", "tags": ["josh baker", "house"] },
+    { "name": "Prospa",        "handle": "@prospa",         "channelId": "UC3vm3QshUXKDbsGISLjikOA", "tags": ["prospa", "dance"] },
+    { "name": "Silva Bumpa",   "handle": "@silvabumpa",     "channelId": "UCqFYgMIXf7pXVTBWrojNOeg", "tags": ["silva bumpa", "uk garage"] },
+    { "name": "Conducta",      "handle": "@conducta",       "channelId": "UCHQYw7F1wRuhr31OQ_2oQbA", "tags": ["conducta", "uk garage"] },
+    { "name": "Chris Lake",    "handle": "@chrislake",      "channelId": "UC8XtHReHyGzgyYVTAhaWwzg", "tags": ["chris lake", "house"] }
   ],
 
   "soundcloud": [
@@ -34,8 +36,7 @@
     { "name": "Ewan McVicar",            "url": "https://soundcloud.com/ewanmcvicar",            "tags": ["ewan mcvicar", "house"] },
     { "name": "salute",                  "url": "https://soundcloud.com/salute",                 "tags": ["salute", "dance"] },
     { "name": "Keep Hush",               "url": "https://soundcloud.com/keephush",               "tags": ["keep hush", "bass"] },
-    { "name": "Rinse FM",                "url": "https://soundcloud.com/rinsefm",                "tags": ["rinse", "uk garage"] },
-    { "name": "HÖR Berlin",              "url": "https://soundcloud.com/hoer-berlin",            "tags": ["hör", "techno"] }
+    { "name": "Rinse FM",                "url": "https://soundcloud.com/rinsefm",                "tags": ["rinse", "uk garage"] }
   ],
 
   "soundcloudPicks": [],
@@ -78,6 +79,7 @@
   "options": {
     "maxSets": 150,
     "perYoutubeChannel": 12,
+    "youtubeMinMinutes": 20,
     "perSoundcloudUser": 10,
     "soundcloudMinMinutes": 20,
     "requestDelayMs": 350
