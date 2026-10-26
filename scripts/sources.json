@@ -323,7 +323,8 @@
     "perYoutubeChannel": 30,
     "youtubeMinMinutes": 20,
     "requestDelayMs": 350,
-    "perSearch": 15
+    "perSearch": 15,
+    "searchDelayMs": 1500
   },
   "searches": [
     {

@@ -167,6 +167,10 @@ svg {
 @media (min-width: 1024px) {
   .layout { grid-template-columns: minmax(0, 1fr) var(--sidebar-w); }
   .stage { padding-block: var(--sp-10); }
+
+  /* the same toggle that drives the sheet collapses the sidebar column */
+  body.panel-closed .layout { grid-template-columns: minmax(0, 1fr); }
+  body.panel-closed .panel { display: none; }
 }
 
 /* ---- 4. Components --------------------------------------------------- */

@@ -142,7 +142,11 @@ function initialState() {
     favs: read(KEYS.favs, []),
     playing: null,
     filter: { tag: null, source: 'all' },
-    panelOpen: false,
+    /* the sidebar remembers its state on wide screens; the sheet always
+       starts closed so it never covers the timer on load */
+    panelOpen: window.matchMedia('(min-width: 1024px)').matches
+      ? read(KEYS.panel, true) !== false
+      : false,
     focusMode: false,
   };
 }

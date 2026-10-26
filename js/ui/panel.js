@@ -4,6 +4,7 @@
  */
 
 import { getState, setState, toggleFavourite } from '../state.js';
+import { KEYS, write } from '../storage.js';
 import * as sets from '../sets.js';
 import * as player from '../player.js';
 
@@ -34,23 +35,42 @@ export function init(elements) {
     renderList();
   });
   el.retry.addEventListener('click', () => sets.load());
+
+  /* crossing the breakpoint changes which mechanism is in play */
+  window.addEventListener('resize', applyPanelState);
+  applyPanelState();
 }
 
 let shuffled = false;
 /** @type {string[]} */
 let shuffleOrder = [];
 
-/** @param {HTMLElement} [trigger] element to return focus to */
+/**
+ * Reflect panelOpen in the DOM. Below the breakpoint the panel is an overlay
+ * sheet driven by .is-open; above it, it is a grid column that body.panel-closed
+ * removes — so the same toggle collapses it at every width.
+ */
+function applyPanelState() {
+  const open = getState().panelOpen;
+  el.panel.classList.toggle('is-open', open);
+  document.body.classList.toggle('panel-closed', !open);
+  el.toggleButton?.setAttribute('aria-pressed', String(open));
+  el.panel.setAttribute('aria-hidden', String(!open));
+}
+
+/** @param {HTMLElement} [trigger] element to return focus to on close */
 export function open(trigger) {
-  lastTrigger = trigger || null;
+  if (trigger) lastTrigger = trigger;
   setState({ panelOpen: true });
-  el.panel.classList.add('is-open');
-  if (isSheet()) el.panel.querySelector('button')?.focus();
+  write(KEYS.panel, true);
+  applyPanelState();
+  if (isSheet()) el.close.focus();
 }
 
 export function close() {
   setState({ panelOpen: false });
-  el.panel.classList.remove('is-open');
+  write(KEYS.panel, false);
+  applyPanelState();
   lastTrigger?.focus();
 }
 

@@ -127,6 +127,7 @@ function boot() {
     shuffle: $('btn-shuffle'),
     surprise: $('btn-surprise'),
     close: $('btn-panel-close'),
+    toggleButton: $('btn-panel'),
     stop: $('btn-player-stop'),
     retry: $('btn-sets-retry'),
     player: $('player'),
