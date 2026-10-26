@@ -1,0 +1,43 @@
+name: Update DJ sets
+
+on:
+  schedule:
+    # 05:17 UTC daily. An off-the-hour minute avoids GitHub's cron rush,
+    # when scheduled runs are most likely to be delayed or dropped.
+    - cron: '17 5 * * *'
+  workflow_dispatch:
+
+# Least privilege: the job only needs to push data/sets.json back.
+permissions:
+  contents: write
+
+concurrency:
+  group: update-sets
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Fetch new sets
+        run: node scripts/update-sets.mjs
+
+      - name: Commit if anything changed
+        run: |
+          if [ -z "$(git status --porcelain data/sets.json scripts/sources.json)" ]; then
+            echo "Nothing changed."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/sets.json scripts/sources.json
+          git commit -m "chore: refresh DJ set list"
+          git push
