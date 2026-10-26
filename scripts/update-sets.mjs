@@ -2,10 +2,9 @@
 /* ==========================================================================
    Deep Work — set-list updater
    ==========================================================================
-   Pulls likely full DJ sets from two public, key-free sources:
+   Pulls likely full DJ sets from YouTube, with no API key:
 
      YouTube     each channel's /videos page (the RSS feeds were retired)
-     SoundCloud  public artist pages + the public oEmbed endpoint
 
    No API keys, no paid services, no dependencies. Node 20+ (global fetch).
 
@@ -15,8 +14,6 @@
    Usage
      node scripts/update-sets.mjs              update data/sets.json
      node scripts/update-sets.mjs --dry-run    report only, write nothing
-     node scripts/update-sets.mjs --youtube    skip SoundCloud
-     node scripts/update-sets.mjs --soundcloud skip YouTube
      node scripts/update-sets.mjs --verbose    log every decision
    ========================================================================== */
 
@@ -31,10 +28,6 @@ const OUT_FILE     = path.join(HERE, '..', 'data', 'sets.json');
 const argv       = new Set(process.argv.slice(2));
 const DRY        = argv.has('--dry-run');
 const VERBOSE    = argv.has('--verbose');
-const ONLY_YT    = argv.has('--youtube');
-const ONLY_SC    = argv.has('--soundcloud');
-const DO_YOUTUBE = !ONLY_SC;
-const DO_SC      = !ONLY_YT;
 
 /* A plain desktop user agent: some public pages serve a stub to unknown ones. */
 const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0 Safari/537.36';
@@ -45,33 +38,32 @@ const warn  = (...a) => console.warn('  ! ', ...a);
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 
 /* ---------- http -------------------------------------------------------- */
-async function fetchText(url, { timeoutMs = 25000 } = {}) {
-  const ctl = new AbortController();
-  const t = setTimeout(() => ctl.abort(), timeoutMs);
-  try {
-    const res = await fetch(url, {
-      signal: ctl.signal,
-      redirect: 'follow',
-      headers: { 'user-agent': UA, 'accept-language': 'en-GB,en;q=0.9' },
-    });
-    if (!res.ok) throw new Error(`HTTP ${res.status} ${res.statusText}`);
-    return await res.text();
-  } finally {
-    clearTimeout(t);
-  }
-}
-async function fetchJson(url, opts) { return JSON.parse(await fetchText(url, opts)); }
+async function fetchText(url, { timeoutMs = 25000, retries = 2 } = {}) {
+  let lastError;
 
-/* ---------- small helpers ---------------------------------------------- */
-function decodeEntities(s = '') {
-  return s
-    .replace(/&(?:amp|#38);/g, '&')
-    .replace(/&(?:lt|#60);/g, '<')
-    .replace(/&(?:gt|#62);/g, '>')
-    .replace(/&(?:quot|#34);/g, '"')
-    .replace(/&(?:apos|#39);/g, "'")
-    .replace(/&#x([0-9a-f]+);/gi, (_, h) => String.fromCodePoint(parseInt(h, 16)))
-    .replace(/&#(\d+);/g, (_, d) => String.fromCodePoint(Number(d)));
+  for (let attempt = 0; attempt <= retries; attempt++) {
+    /* YouTube starts refusing connections after a burst of requests, so
+       back off and try again rather than dropping the result */
+    if (attempt > 0) await sleep(1500 * attempt * attempt);
+
+    const ctl = new AbortController();
+    const t = setTimeout(() => ctl.abort(), timeoutMs);
+    try {
+      const res = await fetch(url, {
+        signal: ctl.signal,
+        redirect: 'follow',
+        headers: { 'user-agent': UA, 'accept-language': 'en-GB,en;q=0.9' },
+      });
+      if (!res.ok) throw new Error(`HTTP ${res.status} ${res.statusText}`);
+      return await res.text();
+    } catch (err) {
+      lastError = err;
+      vlog(`${url} attempt ${attempt + 1} -> ${err.message}`);
+    } finally {
+      clearTimeout(t);
+    }
+  }
+  throw lastError;
 }
 const norm = s => String(s).toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
 const uniq = arr => [...new Set(arr)];
@@ -186,16 +178,37 @@ async function resolveChannelId(handle) {
   return null;
 }
 
-/** Parse a channel /videos page into raw video records. */
+/**
+ * Parse any YouTube page that lists videos — a channel's /videos tab or a
+ * search results page. Channel pages use lockupViewModel, search results
+ * mostly use videoRenderer, so both are handled.
+ */
 function parseChannelVideos(html) {
   const data = extractYtInitialData(html);
   if (!data) return [];
 
-  const lockups = deepFind(data, n => n.lockupViewModel && n.lockupViewModel.contentId)
-    .map(n => n.lockupViewModel);
-
   const seen = new Set();
   const out = [];
+
+  /* search results */
+  for (const node of deepFind(data, n => n.videoRenderer && n.videoRenderer.videoId)) {
+    const v = node.videoRenderer;
+    if (seen.has(v.videoId)) continue;
+    const title = v.title?.runs?.[0]?.text || v.title?.simpleText || '';
+    if (!title) continue;
+    seen.add(v.videoId);
+    out.push({
+      videoId: v.videoId,
+      title,
+      channel: v.ownerText?.runs?.[0]?.text || v.longBylineText?.runs?.[0]?.text || '',
+      durationMs: durationToMs(v.lengthText?.simpleText),
+      published: agoToIso(v.publishedTimeText?.simpleText),
+      publishedApprox: true,
+    });
+  }
+
+  const lockups = deepFind(data, n => n.lockupViewModel && n.lockupViewModel.contentId)
+    .map(n => n.lockupViewModel);
 
   for (const lu of lockups) {
     /* Shorts and playlists carry a different contentType, so this also
@@ -224,11 +237,70 @@ function parseChannelVideos(html) {
     out.push({
       videoId,
       title,
+      channel: parts.find(p => !/view|ago/i.test(p)) || '',
       durationMs: durationToMs(badge),
       published: agoToIso(agoText),
       publishedApprox: true,
     });
   }
+  return out;
+}
+
+/**
+ * Search-based collection.
+ *
+ * Several artists post only short clips on their own channels, so their
+ * full sets live on festival, radio and label channels instead. Each query
+ * must still name the artist in the title, which keeps unrelated results out.
+ */
+async function collectSearch(sources) {
+  const out = [];
+  const searches = sources.searches || [];
+  /* searches are rate-limited harder than channel pages, so they go slower */
+  const delay = sources.options?.searchDelayMs ?? 1500;
+  const perSearch = sources.options?.perSearch ?? 15;
+  const minMs = (sources.options?.youtubeMinMinutes ?? 20) * 60000;
+
+  for (const entry of searches) {
+    const query = typeof entry === 'string' ? entry : entry.query;
+    if (!query) continue;
+    const mustMatch = norm((typeof entry === 'object' && entry.match) || query.split(/\s+/).slice(0, 2).join(' '));
+
+    try {
+      const html = await fetchText(`https://www.youtube.com/results?search_query=${encodeURIComponent(query)}`);
+      const vids = parseChannelVideos(html);
+      let kept = 0;
+
+      for (const v of vids) {
+        if (kept >= perSearch) break;
+        if (!v.durationMs || v.durationMs < minMs) continue;
+        /* the artist has to actually be named, or search drift creeps in */
+        if (!norm(`${v.title} ${v.channel}`).includes(mustMatch)) {
+          vlog(`skip (no name match): ${v.title}`);
+          continue;
+        }
+
+        out.push({
+          id: `yt:${v.videoId}`,
+          source: 'youtube',
+          videoId: v.videoId,
+          url: `https://www.youtube.com/watch?v=${v.videoId}`,
+          title: v.title,
+          channel: v.channel || 'YouTube',
+          published: v.published,
+          publishedApprox: true,
+          durationMs: v.durationMs,
+          tags: buildTags(v.title, v.channel, (typeof entry === 'object' && entry.tags) || [], sources),
+        });
+        kept++;
+      }
+      log(`  "${query}": ${kept} of ${vids.length}`);
+    } catch (err) {
+      warn(`search "${query}" failed — ${err.message}`);
+    }
+    await sleep(delay);
+  }
+
   return out;
 }
 
@@ -303,184 +375,6 @@ async function collectYoutube(sources) {
 }
 
 /* ==========================================================================
-   SOUNDCLOUD
-   --------------------------------------------------------------------------
-   Two passes, both key-free:
-     1. the artist page, whose server-rendered __sc_hydration blob carries
-        full metadata including duration — the best "is this a full set" signal
-     2. anything still missing a title is filled in via the public oEmbed
-        endpoint (https://soundcloud.com/oembed)
-   ========================================================================== */
-
-/** Pull track objects out of a SoundCloud page's hydration data. */
-function parseScHydration(html) {
-  const m = html.match(/window\.__sc_hydration\s*=\s*(\[[\s\S]*?\]);/);
-  if (!m) return [];
-  let data;
-  try { data = JSON.parse(m[1]); } catch { return []; }
-
-  const found = [];
-  const walk = node => {
-    if (!node || typeof node !== 'object') return;
-    if (Array.isArray(node)) { node.forEach(walk); return; }
-
-    const isTrack =
-      typeof node.permalink_url === 'string' &&
-      /soundcloud\.com\//.test(node.permalink_url) &&
-      (node.kind === 'track' || node.kind === 'playlist' || typeof node.duration === 'number');
-
-    if (isTrack) {
-      found.push({
-        scId: node.id ?? null,
-        kind: node.kind || 'track',
-        url: node.permalink_url.split('?')[0],
-        title: node.title || '',
-        user: node.user?.username || node.user?.full_name || '',
-        published: node.display_date || node.created_at || node.last_modified || null,
-        durationMs: typeof node.duration === 'number' ? node.duration : null,
-        artwork: (node.artwork_url || node.calculated_artwork_url || '')
-          .replace('-large.', '-t200x200.') || null,
-      });
-    }
-    Object.values(node).forEach(walk);
-  };
-  walk(data);
-
-  /* de-duplicate by URL, keeping the richest record for each */
-  const byUrl = new Map();
-  for (const t of found) {
-    const prev = byUrl.get(t.url);
-    if (!prev || (!prev.durationMs && t.durationMs) || (!prev.title && t.title)) byUrl.set(t.url, t);
-  }
-  return [...byUrl.values()];
-}
-
-/** Fallback: the crawler-facing microdata on a SoundCloud page. */
-function parseScMicrodata(html, baseUser) {
-  const urls = uniq([...html.matchAll(/itemprop="url"\s+href="(\/[^"]+)"/g)].map(m => m[1]));
-  return urls
-    .filter(u => u.split('/').filter(Boolean).length >= 2)       // /user/track
-    .map(u => ({
-      scId: null, kind: 'track',
-      url: `https://soundcloud.com${u}`,
-      title: '', user: baseUser || '', published: null, durationMs: null, artwork: null,
-    }));
-}
-
-/** Public oEmbed lookup — fills in title, artist and artwork. */
-async function scOembed(url) {
-  const api = `https://soundcloud.com/oembed?format=json&url=${encodeURIComponent(url)}`;
-  const j = await fetchJson(api);
-  return {
-    title: decodeEntities(j.title || ''),
-    user: decodeEntities(j.author_name || ''),
-    artwork: j.thumbnail_url || null,
-  };
-}
-
-async function collectSoundcloud(sources, known) {
-  const out = [];
-  const delay = sources.options?.requestDelayMs ?? 350;
-  const perUser = sources.options?.perSoundcloudUser ?? 10;
-  const minMs = (sources.options?.soundcloudMinMinutes ?? 20) * 60000;
-
-  /* --- artist and label pages --- */
-  for (const src of sources.soundcloud || []) {
-    const base = String(src.url).replace(/\/+$/, '');
-    let candidates = [];
-
-    for (const suffix of ['/tracks', '/sets', '']) {
-      try {
-        const html = await fetchText(base + suffix);
-        let found = parseScHydration(html);
-        if (!found.length) found = parseScMicrodata(html, src.name);
-        candidates.push(...found);
-        await sleep(delay);
-        if (candidates.length >= perUser * 2) break;
-      } catch (err) {
-        vlog(`${base}${suffix} -> ${err.message}`);
-      }
-    }
-
-    if (!candidates.length) {
-      warn(`${src.name}: nothing readable at ${base} — skipped. TODO: check the URL, or add specific set links to "soundcloudPicks".`);
-      continue;
-    }
-
-    /* keep the artist's own uploads, newest first */
-    candidates = candidates
-      .filter(t => t.url.startsWith(base + '/') || t.url === base)
-      .sort((a, b) => (Date.parse(b.published) || 0) - (Date.parse(a.published) || 0));
-
-    let kept = 0;
-    for (const t of candidates) {
-      if (kept >= perUser) break;
-      const id = `sc:${t.url.replace(/^https?:\/\/(www\.)?soundcloud\.com\//, '')}`;
-      if (known.has(id) || out.some(o => o.id === id)) continue;
-
-      /* Duration is the honest filter for a full set. Where it is unknown,
-         fall back to the same keyword test used as a backstop elsewhere. */
-      let title = t.title, user = t.user, artwork = t.artwork;
-      if (!title) {
-        try {
-          const meta = await scOembed(t.url);
-          title = meta.title; user = user || meta.user; artwork = artwork || meta.artwork;
-          await sleep(delay);
-        } catch (err) { vlog(`oembed ${t.url} -> ${err.message}`); continue; }
-      }
-      if (!title) continue;
-
-      const longEnough = t.durationMs ? t.durationMs >= minMs : null;
-      const isSet = t.kind === 'playlist' ? true
-                  : longEnough === null ? looksLikeSet(title, user || src.name, sources)
-                  : longEnough;
-      if (!isSet) { vlog(`skip (${t.durationMs ? Math.round(t.durationMs / 60000) + 'm' : 'title'}): ${title}`); continue; }
-
-      out.push({
-        id,
-        source: 'soundcloud',
-        url: t.url,
-        title,
-        channel: user || src.name,
-        published: t.published || null,
-        durationMs: t.durationMs || null,
-        thumb: artwork || null,
-        tags: buildTags(title, user || src.name, src.tags, sources),
-      });
-      kept++;
-    }
-    log(`  ${src.name} (SoundCloud): ${kept} kept of ${candidates.length} found`);
-  }
-
-  /* --- hand-picked permalinks --- */
-  for (const pick of sources.soundcloudPicks || []) {
-    const url = (typeof pick === 'string' ? pick : pick.url || '').split('?')[0];
-    if (!url) continue;
-    const id = `sc:${url.replace(/^https?:\/\/(www\.)?soundcloud\.com\//, '')}`;
-    if (known.has(id) || out.some(o => o.id === id)) continue;
-    try {
-      const meta = await scOembed(url);
-      if (!meta.title) continue;
-      out.push({
-        id, source: 'soundcloud', url,
-        title: meta.title,
-        channel: meta.user,
-        published: (typeof pick === 'object' && pick.published) || null,
-        durationMs: null,
-        thumb: meta.artwork,
-        tags: buildTags(meta.title, meta.user, (typeof pick === 'object' && pick.tags) || [], sources),
-      });
-      log(`  pick: ${meta.title}`);
-      await sleep(delay);
-    } catch (err) {
-      warn(`pick ${url} failed — ${err.message}`);
-    }
-  }
-
-  return out;
-}
-
-/* ==========================================================================
    MERGE + WRITE
    ========================================================================== */
 async function readJson(file, fallback) {
@@ -523,18 +417,15 @@ async function main() {
   const fresh = [];
   let resolvedAny = false;
 
-  if (DO_YOUTUBE) {
-    log('YouTube');
-    const r = await collectYoutube(sources);
-    fresh.push(...r.sets);
-    resolvedAny = r.resolvedAny;
-    log('');
-  }
-  if (DO_SC) {
-    log('SoundCloud');
-    fresh.push(...await collectSoundcloud(sources, known));
-    log('');
-  }
+  log('Channels');
+  const collected = await collectYoutube(sources);
+  fresh.push(...collected.sets);
+  resolvedAny = collected.resolvedAny;
+  log('');
+
+  log('Searches');
+  fresh.push(...await collectSearch(sources));
+  log('');
 
   const merged = mergeSets(existing, fresh, max);
   const added = merged.filter(s => !known.has(s.id)).length;

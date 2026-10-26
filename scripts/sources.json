@@ -1,87 +1,530 @@
 {
-  "_readme": "YouTube channel IDs below were resolved from each channel's canonical link and the channel name was checked. Add a channel as {name, handle, channelId:null, tags:[]} and the updater resolves and caches the id on the next run.",
-
+  "_readme": "YouTube only. Channel IDs were resolved from each channel canonical link and the channel name checked. Add a channel as {name, handle, channelId:null, tags:[]} and the updater resolves and caches the id on the next run.",
   "_todo": [
     "HÖR Berlin: @HORBerlin is an unrelated German theatre channel. Real channel not verified — find it, paste the UC… id in.",
     "Defected: @defected is a dormant 2007 account; @defectedrecords is their retired channel. Current one not verified.",
-    "Interplanetary Criminal, salute, Skream: @interplanetarycriminal / @salute / @skream all 404. They may have no channel under those handles.",
     "Cercle mostly posts short clips on /videos; their long sets come through but at a lower rate than Boiler Room or Rinse."
   ],
-
   "youtube": [
-    { "name": "Boiler Room",   "handle": "@boilerroom",     "channelId": "UCGBpxWJr9FNOcFYA5GkKrMg", "tags": ["boiler room", "house", "bass"] },
-    { "name": "Keep Hush",     "handle": "@KeepHush",       "channelId": "UCQAnY_suiNH0MvdTHk5GiBA", "tags": ["keep hush", "uk garage", "bass"] },
-    { "name": "Rinse FM",      "handle": "@RinseFM",        "channelId": "UCgGfSxNOBkJDtCQ932iQU7Q", "tags": ["rinse", "uk garage", "bass"] },
-    { "name": "Mixmag",        "handle": "@Mixmag",         "channelId": "UCQdCIrTpkhEH5Z8KPsn7NvQ", "tags": ["mixmag", "house", "bass"] },
-    { "name": "Cercle",        "handle": "@Cercle",         "channelId": "UCPKT_csvP72boVX0XrMtagQ", "tags": ["cercle", "house", "melodic"] },
-    { "name": "The Lot Radio", "handle": "@TheLotRadio",    "channelId": "UCJOtExbMu0RqIdiE4nMUPxQ", "tags": ["the lot radio", "house"] },
-    { "name": "Sammy Virji",   "handle": "@sammyvirji",     "channelId": "UCf4EV_7RUlUGp-SgJOfcnlA", "tags": ["sammy virji", "uk garage"] },
-    { "name": "KETTAMA",       "handle": "@kettama",        "channelId": "UCkupaq5MFpC5jsRXU4pvVIA", "tags": ["kettama", "house"] },
-    { "name": "Josh Baker",    "handle": "@joshbakermusic", "channelId": "UCqRZH50fsB1oewilWPTgLaQ", "tags": ["josh baker", "house"] },
-    { "name": "Prospa",        "handle": "@prospa",         "channelId": "UC3vm3QshUXKDbsGISLjikOA", "tags": ["prospa", "dance"] },
-    { "name": "Silva Bumpa",   "handle": "@silvabumpa",     "channelId": "UCqFYgMIXf7pXVTBWrojNOeg", "tags": ["silva bumpa", "uk garage"] },
-    { "name": "Conducta",      "handle": "@conducta",       "channelId": "UCHQYw7F1wRuhr31OQ_2oQbA", "tags": ["conducta", "uk garage"] },
-    { "name": "Chris Lake",    "handle": "@chrislake",      "channelId": "UC8XtHReHyGzgyYVTAhaWwzg", "tags": ["chris lake", "house"] }
+    {
+      "name": "Boiler Room",
+      "handle": "@boilerroom",
+      "channelId": "UCGBpxWJr9FNOcFYA5GkKrMg",
+      "tags": [
+        "boiler room",
+        "house",
+        "bass"
+      ]
+    },
+    {
+      "name": "Keep Hush",
+      "handle": "@KeepHush",
+      "channelId": "UCQAnY_suiNH0MvdTHk5GiBA",
+      "tags": [
+        "keep hush",
+        "uk garage",
+        "bass"
+      ]
+    },
+    {
+      "name": "Rinse FM",
+      "handle": "@RinseFM",
+      "channelId": "UCgGfSxNOBkJDtCQ932iQU7Q",
+      "tags": [
+        "rinse",
+        "uk garage",
+        "bass"
+      ]
+    },
+    {
+      "name": "Mixmag",
+      "handle": "@Mixmag",
+      "channelId": "UCQdCIrTpkhEH5Z8KPsn7NvQ",
+      "tags": [
+        "mixmag",
+        "house",
+        "bass"
+      ]
+    },
+    {
+      "name": "Cercle",
+      "handle": "@Cercle",
+      "channelId": "UCPKT_csvP72boVX0XrMtagQ",
+      "tags": [
+        "cercle",
+        "house",
+        "melodic"
+      ]
+    },
+    {
+      "name": "The Lot Radio",
+      "handle": "@TheLotRadio",
+      "channelId": "UCJOtExbMu0RqIdiE4nMUPxQ",
+      "tags": [
+        "the lot radio",
+        "house"
+      ]
+    },
+    {
+      "name": "Sammy Virji",
+      "handle": "@sammyvirji",
+      "channelId": "UCf4EV_7RUlUGp-SgJOfcnlA",
+      "tags": [
+        "sammy virji",
+        "uk garage"
+      ]
+    },
+    {
+      "name": "KETTAMA",
+      "handle": "@kettama",
+      "channelId": "UCkupaq5MFpC5jsRXU4pvVIA",
+      "tags": [
+        "kettama",
+        "house"
+      ]
+    },
+    {
+      "name": "Josh Baker",
+      "handle": "@joshbakermusic",
+      "channelId": "UCqRZH50fsB1oewilWPTgLaQ",
+      "tags": [
+        "josh baker",
+        "house"
+      ]
+    },
+    {
+      "name": "Prospa",
+      "handle": "@prospa",
+      "channelId": "UC3vm3QshUXKDbsGISLjikOA",
+      "tags": [
+        "prospa",
+        "dance"
+      ]
+    },
+    {
+      "name": "Silva Bumpa",
+      "handle": "@silvabumpa",
+      "channelId": "UCqFYgMIXf7pXVTBWrojNOeg",
+      "tags": [
+        "silva bumpa",
+        "uk garage"
+      ]
+    },
+    {
+      "name": "Conducta",
+      "handle": "@conducta",
+      "channelId": "UCHQYw7F1wRuhr31OQ_2oQbA",
+      "tags": [
+        "conducta",
+        "uk garage"
+      ]
+    },
+    {
+      "name": "Chris Lake",
+      "handle": "@chrislake",
+      "channelId": "UC8XtHReHyGzgyYVTAhaWwzg",
+      "tags": [
+        "chris lake",
+        "house"
+      ]
+    }
   ],
-
-  "soundcloud": [
-    { "name": "Sammy Virji",             "url": "https://soundcloud.com/sammyvirji",             "tags": ["sammy virji", "uk garage"] },
-    { "name": "KETTAMA",                 "url": "https://soundcloud.com/kettama",                "tags": ["kettama", "house"] },
-    { "name": "Josh Baker",              "url": "https://soundcloud.com/joshbakermusic",         "tags": ["josh baker", "house"] },
-    { "name": "Prospa",                  "url": "https://soundcloud.com/prospa",                 "tags": ["prospa", "dance"] },
-    { "name": "Silva Bumpa",             "url": "https://soundcloud.com/silvabumpa",             "tags": ["silva bumpa", "uk garage"] },
-    { "name": "Interplanetary Criminal", "url": "https://soundcloud.com/interplanetary-criminal", "tags": ["interplanetary criminal", "uk garage"] },
-    { "name": "Conducta",                "url": "https://soundcloud.com/conducta",               "tags": ["conducta", "uk garage"] },
-    { "name": "Main Phase",              "url": "https://soundcloud.com/mainphase",              "tags": ["main phase", "uk garage"] },
-    { "name": "Ewan McVicar",            "url": "https://soundcloud.com/ewanmcvicar",            "tags": ["ewan mcvicar", "house"] },
-    { "name": "salute",                  "url": "https://soundcloud.com/salute",                 "tags": ["salute", "dance"] },
-    { "name": "Keep Hush",               "url": "https://soundcloud.com/keep-hush",              "tags": ["keep hush", "bass"] },
-    { "name": "Rinse FM",                "url": "https://soundcloud.com/rinsefm",                "tags": ["rinse", "uk garage"] }
-  ],
-
-  "soundcloudPicks": [],
-
   "artists": [
-    { "name": "Sammy Virji",             "tags": ["sammy virji", "uk garage"] },
-    { "name": "Kettama",                 "tags": ["kettama", "house"] },
-    { "name": "Josh Baker",              "tags": ["josh baker", "house"] },
-    { "name": "Prospa",                  "tags": ["prospa", "dance"] },
-    { "name": "Silva Bumpa",             "tags": ["silva bumpa", "uk garage"] },
-    { "name": "Interplanetary Criminal", "tags": ["interplanetary criminal", "uk garage"] },
-    { "name": "Conducta",                "tags": ["conducta", "uk garage"] },
-    { "name": "Chris Lake",              "tags": ["chris lake", "house"] },
-    { "name": "Fred again",              "tags": ["fred again", "dance"] },
-    { "name": "Skream",                  "tags": ["skream", "bass"] },
-    { "name": "Main Phase",              "tags": ["main phase", "uk garage"] },
-    { "name": "Salute",                  "tags": ["salute", "dance"] },
-    { "name": "Ewan McVicar",            "tags": ["ewan mcvicar", "house"] },
-    { "name": "Hamdi",                   "tags": ["hamdi", "bass"] },
-    { "name": "Barry Can't Swim",        "tags": ["barry cant swim", "house"] },
-    { "name": "Nia Archives",            "tags": ["nia archives", "jungle"] },
-    { "name": "Mall Grab",               "tags": ["mall grab", "house"] },
-    { "name": "Overmono",                "tags": ["overmono", "dance"] }
+    {
+      "name": "Sammy Virji",
+      "tags": [
+        "sammy virji",
+        "uk garage"
+      ]
+    },
+    {
+      "name": "Kettama",
+      "tags": [
+        "kettama",
+        "house"
+      ]
+    },
+    {
+      "name": "Josh Baker",
+      "tags": [
+        "josh baker",
+        "house"
+      ]
+    },
+    {
+      "name": "Prospa",
+      "tags": [
+        "prospa",
+        "dance"
+      ]
+    },
+    {
+      "name": "Silva Bumpa",
+      "tags": [
+        "silva bumpa",
+        "uk garage"
+      ]
+    },
+    {
+      "name": "Interplanetary Criminal",
+      "tags": [
+        "interplanetary criminal",
+        "uk garage"
+      ]
+    },
+    {
+      "name": "Conducta",
+      "tags": [
+        "conducta",
+        "uk garage"
+      ]
+    },
+    {
+      "name": "Chris Lake",
+      "tags": [
+        "chris lake",
+        "house"
+      ]
+    },
+    {
+      "name": "Fred again",
+      "tags": [
+        "fred again",
+        "dance"
+      ]
+    },
+    {
+      "name": "Skream",
+      "tags": [
+        "skream",
+        "bass"
+      ]
+    },
+    {
+      "name": "Main Phase",
+      "tags": [
+        "main phase",
+        "uk garage"
+      ]
+    },
+    {
+      "name": "Salute",
+      "tags": [
+        "salute",
+        "dance"
+      ]
+    },
+    {
+      "name": "Ewan McVicar",
+      "tags": [
+        "ewan mcvicar",
+        "house"
+      ]
+    },
+    {
+      "name": "Hamdi",
+      "tags": [
+        "hamdi",
+        "bass"
+      ]
+    },
+    {
+      "name": "Barry Can't Swim",
+      "tags": [
+        "barry cant swim",
+        "house"
+      ]
+    },
+    {
+      "name": "Nia Archives",
+      "tags": [
+        "nia archives",
+        "jungle"
+      ]
+    },
+    {
+      "name": "Mall Grab",
+      "tags": [
+        "mall grab",
+        "house"
+      ]
+    },
+    {
+      "name": "Overmono",
+      "tags": [
+        "overmono",
+        "dance"
+      ]
+    }
   ],
-
   "keywords": [
-    "set", "dj set", "mix", "boiler room", "live", "b2b", "dj", "essential mix",
-    "warehouse", "rinse", "keep hush", "hör", "cercle", "takeover", "residency", "hour mix"
+    "set",
+    "dj set",
+    "mix",
+    "boiler room",
+    "live",
+    "b2b",
+    "dj",
+    "essential mix",
+    "warehouse",
+    "rinse",
+    "keep hush",
+    "hör",
+    "cercle",
+    "takeover",
+    "residency",
+    "hour mix"
   ],
-
   "genreKeywords": {
-    "uk garage": ["uk garage", "ukg", "garage", "2-step", "speed garage", "bassline"],
-    "house":     ["house", "tech house", "deep house", "acid house", "disco"],
-    "bass":      ["bass", "dubstep", "bassline", "grime", "riddim"],
-    "techno":    ["techno", "hard techno", "industrial"],
-    "jungle":    ["jungle", "drum and bass", "dnb", "d&b", "breakbeat"],
-    "dance":     ["dance", "edm", "rave", "trance", "hard dance"]
+    "uk garage": [
+      "uk garage",
+      "ukg",
+      "garage",
+      "2-step",
+      "speed garage",
+      "bassline"
+    ],
+    "house": [
+      "house",
+      "tech house",
+      "deep house",
+      "acid house",
+      "disco"
+    ],
+    "bass": [
+      "bass",
+      "dubstep",
+      "bassline",
+      "grime",
+      "riddim"
+    ],
+    "techno": [
+      "techno",
+      "hard techno",
+      "industrial"
+    ],
+    "jungle": [
+      "jungle",
+      "drum and bass",
+      "dnb",
+      "d&b",
+      "breakbeat"
+    ],
+    "dance": [
+      "dance",
+      "edm",
+      "rave",
+      "trance",
+      "hard dance"
+    ]
   },
-
   "options": {
-    "maxSets": 150,
-    "perYoutubeChannel": 12,
+    "maxSets": 400,
+    "perYoutubeChannel": 30,
     "youtubeMinMinutes": 20,
-    "perSoundcloudUser": 10,
-    "soundcloudMinMinutes": 20,
-    "requestDelayMs": 350
-  }
+    "requestDelayMs": 350,
+    "perSearch": 15
+  },
+  "searches": [
+    {
+      "query": "KETTAMA dj set",
+      "match": "kettama",
+      "tags": [
+        "kettama",
+        "house"
+      ]
+    },
+    {
+      "query": "KETTAMA boiler room",
+      "match": "kettama",
+      "tags": [
+        "kettama",
+        "house"
+      ]
+    },
+    {
+      "query": "Prospa dj set",
+      "match": "prospa",
+      "tags": [
+        "prospa",
+        "dance"
+      ]
+    },
+    {
+      "query": "Prospa live set",
+      "match": "prospa",
+      "tags": [
+        "prospa",
+        "dance"
+      ]
+    },
+    {
+      "query": "Silva Bumpa dj set",
+      "match": "silva bumpa",
+      "tags": [
+        "silva bumpa",
+        "uk garage"
+      ]
+    },
+    {
+      "query": "Silva Bumpa mix",
+      "match": "silva bumpa",
+      "tags": [
+        "silva bumpa",
+        "uk garage"
+      ]
+    },
+    {
+      "query": "Sammy Virji dj set",
+      "match": "sammy virji",
+      "tags": [
+        "sammy virji",
+        "uk garage"
+      ]
+    },
+    {
+      "query": "Sammy Virji boiler room",
+      "match": "sammy virji",
+      "tags": [
+        "sammy virji",
+        "uk garage"
+      ]
+    },
+    {
+      "query": "Interplanetary Criminal set",
+      "match": "interplanetary criminal",
+      "tags": [
+        "interplanetary criminal",
+        "uk garage"
+      ]
+    },
+    {
+      "query": "Conducta dj set",
+      "match": "conducta",
+      "tags": [
+        "conducta",
+        "uk garage"
+      ]
+    },
+    {
+      "query": "Main Phase dj set",
+      "match": "main phase",
+      "tags": [
+        "main phase",
+        "uk garage"
+      ]
+    },
+    {
+      "query": "salute dj set",
+      "match": "salute",
+      "tags": [
+        "salute",
+        "dance"
+      ]
+    },
+    {
+      "query": "Ewan McVicar dj set",
+      "match": "ewan mcvicar",
+      "tags": [
+        "ewan mcvicar",
+        "house"
+      ]
+    },
+    {
+      "query": "Josh Baker dj set",
+      "match": "josh baker",
+      "tags": [
+        "josh baker",
+        "house"
+      ]
+    },
+    {
+      "query": "Chris Lake dj set",
+      "match": "chris lake",
+      "tags": [
+        "chris lake",
+        "house"
+      ]
+    },
+    {
+      "query": "Skream dj set",
+      "match": "skream",
+      "tags": [
+        "skream",
+        "bass"
+      ]
+    },
+    {
+      "query": "Hamdi dj set",
+      "match": "hamdi",
+      "tags": [
+        "hamdi",
+        "bass"
+      ]
+    },
+    {
+      "query": "Barry Cant Swim live set",
+      "match": "barry",
+      "tags": [
+        "barry cant swim",
+        "house"
+      ]
+    },
+    {
+      "query": "Nia Archives dj set",
+      "match": "nia archives",
+      "tags": [
+        "nia archives",
+        "jungle"
+      ]
+    },
+    {
+      "query": "Mall Grab dj set",
+      "match": "mall grab",
+      "tags": [
+        "mall grab",
+        "house"
+      ]
+    },
+    {
+      "query": "Overmono live set",
+      "match": "overmono",
+      "tags": [
+        "overmono",
+        "dance"
+      ]
+    },
+    {
+      "query": "Fred again b2b set",
+      "match": "fred again",
+      "tags": [
+        "fred again",
+        "dance"
+      ]
+    },
+    {
+      "query": "Kettama b2b",
+      "match": "kettama",
+      "tags": [
+        "kettama",
+        "house"
+      ]
+    },
+    {
+      "query": "Prospa b2b",
+      "match": "prospa",
+      "tags": [
+        "prospa",
+        "dance"
+      ]
+    },
+    {
+      "query": "Silva Bumpa b2b",
+      "match": "silva bumpa",
+      "tags": [
+        "silva bumpa",
+        "uk garage"
+      ]
+    }
+  ]
 }

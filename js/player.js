@@ -32,31 +32,16 @@ export function externalUrl(set) {
  * @returns {string}
  */
 function embedUrl(set) {
-  if (set.source === 'youtube') {
-    /* enablejsapi lets us pause it later via postMessage */
-    const p = new URLSearchParams({
-      autoplay: '1',
-      rel: '0',
-      modestbranding: '1',
-      playsinline: '1',
-      enablejsapi: '1',
-      origin: location.origin,
-    });
-    return `https://www.youtube-nocookie.com/embed/${encodeURIComponent(set.videoId || '')}?${p}`;
-  }
-  /* SoundCloud's widget is a real soundcloud.com page: if the viewer is
-     signed in there, it plays as them. This app never sees those details. */
+  /* enablejsapi lets us pause it later via postMessage */
   const p = new URLSearchParams({
-    url: set.url,
-    auto_play: 'true',
-    hide_related: 'true',
-    show_comments: 'false',
-    show_user: 'true',
-    show_reposts: 'false',
-    show_teaser: 'false',
-    visual: 'false',
+    autoplay: '1',
+    rel: '0',
+    modestbranding: '1',
+    playsinline: '1',
+    enablejsapi: '1',
+    origin: location.origin,
   });
-  return `https://w.soundcloud.com/player/?${p}`;
+  return `https://www.youtube-nocookie.com/embed/${encodeURIComponent(set.videoId || '')}?${p}`;
 }
 
 /**
@@ -75,7 +60,6 @@ export function open(set) {
     mount.append(frame);
   }
   current = set;
-  mount.dataset.source = set.source;
   frame.src = embedUrl(set);
 }
 
@@ -92,14 +76,10 @@ export function currentSet() {
 export function pause() {
   if (!frame || !frame.contentWindow || !current) return false;
   try {
-    if (current.source === 'youtube') {
-      frame.contentWindow.postMessage(
-        JSON.stringify({ event: 'command', func: 'pauseVideo', args: [] }),
-        'https://www.youtube-nocookie.com'
-      );
-    } else {
-      frame.contentWindow.postMessage(JSON.stringify({ method: 'pause' }), 'https://w.soundcloud.com');
-    }
+    frame.contentWindow.postMessage(
+      JSON.stringify({ event: 'command', func: 'pauseVideo', args: [] }),
+      'https://www.youtube-nocookie.com'
+    );
     return true;
   } catch {
     return false;

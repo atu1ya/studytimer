@@ -374,6 +374,16 @@ body.is-resizing iframe { pointer-events: none; }
   transition: background-color 0.15s ease, color 0.15s ease;
 }
 .pill__input:checked + .pill__text { background: var(--accent); color: var(--on-accent); }
+
+/* "Show more" sits in the same row as the chips but is a button, not a filter */
+.pill--toggle {
+  flex: none;
+  padding: 6px var(--sp-3);
+  font-size: var(--text-13); white-space: nowrap;
+  color: var(--accent); background: none; border: 0;
+  border-radius: 999px; cursor: pointer;
+}
+.pill--toggle:hover { background: var(--fill); }
 .pill__input:focus-visible + .pill__text { outline: 2px solid var(--accent); outline-offset: 2px; }
 
 .sets { flex: 1; min-height: 0; overflow-y: auto; padding-bottom: var(--sp-2); }
@@ -438,7 +448,6 @@ body.is-resizing iframe { pointer-events: none; }
   position: relative; aspect-ratio: 16 / 9;
   border-radius: var(--radius-12); overflow: hidden; background: #000;
 }
-.player__mount[data-source="soundcloud"] { aspect-ratio: auto; height: 166px; }
 .player__mount iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 .player__bar { display: flex; align-items: center; gap: var(--sp-1); padding-top: var(--sp-2); }
 .player__title {
@@ -520,6 +529,13 @@ body.is-resizing iframe { pointer-events: none; }
   padding: 6px var(--sp-2);
   font-size: var(--text-15);
   background: var(--fill); border: 0; border-radius: var(--radius-8);
+}
+/* The popup list is drawn by the OS. Without explicit values the options
+   inherit a near-white label colour onto a white popup and wash out, so
+   both are set here rather than trusting color-scheme alone. */
+.row select option {
+  background-color: var(--bg-elevated);
+  color: var(--label);
 }
 
 /* switch */

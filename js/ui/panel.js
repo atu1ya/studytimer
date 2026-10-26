@@ -92,7 +92,7 @@ function renderPlayer() {
   el.playerTitle.textContent = set ? set.title : '';
   if (set) {
     el.playerLink.href = player.externalUrl(set);
-    el.playerLink.title = `Open on ${set.source === 'youtube' ? 'YouTube' : 'SoundCloud'}`;
+    el.playerLink.title = 'Open on YouTube';
   }
 }
 
@@ -104,17 +104,15 @@ function renderFooter() {
   el.meta.textContent = when ? `${all.length} sets · updated ${when}` : `${all.length} sets`;
 }
 
+/** how many tag chips show before "Show more" */
+const COLLAPSED_TAGS = 7;
+let tagsExpanded = false;
+
 function renderFilters() {
   const { sets: all, favs, filter } = getState();
-  const counts = {
-    youtube: all.filter((s) => s.source === 'youtube').length,
-    soundcloud: all.filter((s) => s.source === 'soundcloud').length,
-  };
 
   const sources = [
     { key: 'all', label: 'All', count: all.length },
-    { key: 'youtube', label: 'YouTube', count: counts.youtube },
-    { key: 'soundcloud', label: 'SoundCloud', count: counts.soundcloud },
     { key: 'favs', label: 'Favourites', count: favs.length },
   ];
 
@@ -125,19 +123,47 @@ function renderFilters() {
     }))
   );
 
-  const tags = sets.topTags();
-  el.tags.replaceChildren(
+  const tags = sets.topTags(40);
+  const shown = tagsExpanded ? tags : tags.slice(0, COLLAPSED_TAGS);
+  const hiddenCount = tags.length - shown.length;
+
+  const chips = [
     pill('tag', '', 'Everything', !filter.tag, () => {
       setState({ filter: { ...getState().filter, tag: null } });
       render();
     }),
-    ...tags.map(({ tag, count }) =>
+    ...shown.map(({ tag, count }) =>
       pill('tag', tag, `${tag} ${count}`, filter.tag === tag, (key) => {
         setState({ filter: { ...getState().filter, tag: key === filter.tag ? null : key } });
         render();
       })
-    )
-  );
+    ),
+  ];
+
+  /* keep a selected tag reachable even when it sits past the cut */
+  if (!tagsExpanded && filter.tag && !shown.some((t) => t.tag === filter.tag)) {
+    const active = tags.find((t) => t.tag === filter.tag);
+    if (active) {
+      chips.push(
+        pill('tag', active.tag, `${active.tag} ${active.count}`, true, () => {
+          setState({ filter: { ...getState().filter, tag: null } });
+          render();
+        })
+      );
+    }
+  }
+
+  if (hiddenCount > 0 || tagsExpanded) {
+    const toggle = document.createElement('button');
+    toggle.type = 'button';
+    toggle.className = 'pill pill--toggle';
+    toggle.textContent = tagsExpanded ? 'Show less' : `Show ${hiddenCount} more`;
+    toggle.setAttribute('aria-expanded', String(tagsExpanded));
+    toggle.addEventListener('click', () => { tagsExpanded = !tagsExpanded; renderFilters(); });
+    chips.push(toggle);
+  }
+
+  el.tags.replaceChildren(...chips);
 }
 
 /**
@@ -256,10 +282,7 @@ function row(set, isFav, isPlaying) {
   title.textContent = set.title;
   const meta = document.createElement('span');
   meta.className = 'set__meta';
-  const when = sets.relativeDate(set.published);
-  meta.textContent = [set.channel, set.source === 'youtube' ? 'YouTube' : 'SoundCloud', when]
-    .filter(Boolean)
-    .join(' · ');
+  meta.textContent = [set.channel, sets.relativeDate(set.published)].filter(Boolean).join(' · ');
   body.append(title, meta);
 
   openBtn.append(thumb, body);
@@ -277,7 +300,7 @@ function row(set, isFav, isPlaying) {
   ext.href = player.externalUrl(set);
   ext.target = '_blank';
   ext.rel = 'noopener';
-  ext.setAttribute('aria-label', `Open ${set.title} on ${set.source === 'youtube' ? 'YouTube' : 'SoundCloud'}`);
+  ext.setAttribute('aria-label', `Open  on YouTube`);
   ext.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3h7v7M21 3l-9 9M19 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h5"/></svg>';
 
   const actions = document.createElement('span');

@@ -50,8 +50,8 @@ import { KEYS, read, write, migrateSettings } from './storage.js';
 /**
  * One entry in data/sets.json. Shape is fixed by scripts/update-sets.mjs.
  * @typedef {object} DjSet
- * @property {string} id                      "yt:<videoId>" or "sc:<path>"
- * @property {'youtube'|'soundcloud'} source
+ * @property {string} id                      "yt:<videoId>"
+ * @property {'youtube'} source
  * @property {string} title
  * @property {string} channel
  * @property {string} url
