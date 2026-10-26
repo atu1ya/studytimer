@@ -26,12 +26,23 @@ const K = {
 
 const DEFAULTS = {
   focus:50, short:10, long:20, longEvery:4, autoStart:false,
-  theme:'dark', accent:'violet',
-  volume:0.6, focusChime:'bell', breakChime:'marimba', warn:true, notify:false,
+  v:2,
+  theme:'dark', accent:'acid',
+  volume:0.6, focusChime:'ukg', breakChime:'marimba', warn:true, notify:false,
 };
 
 let settings = { ...DEFAULTS, ...LS.get(K.settings, {}) };
 const saveSettings = () => LS.set(K.settings, settings);
+
+/* The palette and the default chime changed in v2. Anyone still carrying the
+   old saved values is moved across once; v is written with every later save,
+   so a choice made after this point is never overwritten. */
+if (settings.v !== 2) {
+  settings.v = 2;
+  settings.accent = DEFAULTS.accent;
+  settings.focusChime = DEFAULTS.focusChime;
+  saveSettings();
+}
 
 /* ---------- theme + accent --------------------------------------------- */
 function applyTheme() {
@@ -168,6 +179,72 @@ const CHIMES = {
     c.type = 'triangle'; c.frequency.value = 900;
     cg.gain.setValueAtTime(.18, t); cg.gain.exponentialRampToValueAtTime(.0001, t + .05);
     c.connect(cg); cg.connect(out); c.start(t); c.stop(t + .06);
+  },
+
+  /* UK garage: a syncopated run of drawbar-organ stabs over a sub, with a
+     filtered noise tick on the skip. Minor-9 voicing, clipped short. */
+  ukg(ctx, t, out) {
+    const chord = [185.00, 220.00, 277.18, 329.63];   // F#m add9
+    const drawbars = [[1, 1], [2, .55], [3, .3], [4, .18]];
+
+    const lp = ctx.createBiquadFilter();
+    lp.type = 'lowpass'; lp.Q.value = 7;
+    lp.connect(out);
+
+    /* one organ stab */
+    const stab = (t0, gain, cutoff) => {
+      lp.frequency.setValueAtTime(cutoff, t0);
+      lp.frequency.exponentialRampToValueAtTime(cutoff * .4, t0 + .3);
+
+      const env = ctx.createGain();
+      env.gain.setValueAtTime(0, t0);
+      env.gain.linearRampToValueAtTime(gain, t0 + .007);
+      env.gain.exponentialRampToValueAtTime(.0001, t0 + .33);
+      env.connect(lp);
+
+      for (const f of chord) {
+        for (const [mult, amp] of drawbars) {
+          const o = ctx.createOscillator(); const g = ctx.createGain();
+          o.type = 'sine';
+          o.frequency.value = f * mult;
+          o.detune.value = (Math.random() * 9) - 4.5;   // organ chorus
+          g.gain.value = amp * .11;
+          o.connect(g); g.connect(env); o.start(t0); o.stop(t0 + .4);
+        }
+      }
+    };
+
+    /* sub underneath the downbeats */
+    const sub = (t0, gain) => {
+      const o = ctx.createOscillator(); const g = ctx.createGain();
+      o.type = 'sine'; o.frequency.value = 92.5;
+      g.gain.setValueAtTime(0, t0);
+      g.gain.linearRampToValueAtTime(gain, t0 + .01);
+      g.gain.exponentialRampToValueAtTime(.0001, t0 + .28);
+      o.connect(g); g.connect(out); o.start(t0); o.stop(t0 + .3);
+    };
+
+    /* closed hat: short burst of high-passed noise */
+    const hat = (t0, gain) => {
+      const len = Math.floor(ctx.sampleRate * .05);
+      const buf = ctx.createBuffer(1, len, ctx.sampleRate);
+      const data = buf.getChannelData(0);
+      for (let i = 0; i < len; i++) data[i] = (Math.random() * 2 - 1) * (1 - i / len);
+
+      const src = ctx.createBufferSource(); src.buffer = buf;
+      const hp = ctx.createBiquadFilter(); hp.type = 'highpass'; hp.frequency.value = 7200;
+      const g = ctx.createGain(); g.gain.value = gain;
+      src.connect(hp); hp.connect(g); g.connect(out);
+      src.start(t0);
+    };
+
+    /* two-step: stab, skip, stab-stab */
+    stab(t,        .85, 2600); sub(t,        .5);
+    hat (t + .145, .06);
+    stab(t + .285, .5,  1900);
+    hat (t + .40,  .045);
+    stab(t + .465, .8,  2400); sub(t + .465, .45);
+    hat (t + .62,  .055);
   },
 };
 

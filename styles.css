@@ -3,19 +3,21 @@
    ========================================================================== */
 
 :root {
-  --accent:#7c5cff; --accent-2:#b89bff; --accent-rgb:124 92 255;
-  --bg:#0a0a0c; --bg-2:#0e0e12;
-  --surface:rgb(255 255 255/.035); --surface-2:rgb(255 255 255/.06);
-  --line:rgb(255 255 255/.09); --line-2:rgb(255 255 255/.16);
-  --text:#ecedf1; --muted:#8c8f9b; --faint:#5c5f6b;
-  --glow:0 0 0 1px rgb(var(--accent-rgb)/.35), 0 0 24px -4px rgb(var(--accent-rgb)/.45), 0 0 64px -12px rgb(var(--accent-rgb)/.3);
-  --r-sm:8px; --r:12px; --r-lg:18px;
+  --accent:#c8ff00; --accent-2:#e8ff8a; --accent-rgb:200 255 0;
+  --bg:#08080a; --bg-2:#0c0c0f;
+  --surface:rgb(255 255 255/.03); --surface-2:rgb(255 255 255/.065);
+  --line:rgb(255 255 255/.08); --line-2:rgb(255 255 255/.18);
+  --text:#e8e8ea; --muted:#8a8a90; --faint:#55555c;
+  --glow:0 0 0 1px rgb(var(--accent-rgb)/.5);
+  /* flyer, not landing page: corners stay close to square */
+  --r-sm:2px; --r:3px; --r-lg:4px;
   --ui:'Space Grotesk', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
   --mono:'JetBrains Mono', ui-monospace, Menlo, monospace;
   --ease:cubic-bezier(.22,.61,.36,1);
   --topbar:58px; --gutter:clamp(16px,3vw,32px);
 }
-[data-accent="acid"]  { --accent:#b8ff2e; --accent-2:#e4ff9b; --accent-rgb:184 255 46; }
+[data-accent="violet"] { --accent:#7c5cff; --accent-2:#b89bff; --accent-rgb:124 92 255; }
+[data-accent="acid"]   { --accent:#c8ff00; --accent-2:#e8ff8a; --accent-rgb:200 255 0; }
 [data-accent="cyan"]  { --accent:#2ee6ff; --accent-2:#a6f4ff; --accent-rgb:46 230 255; }
 [data-accent="amber"] { --accent:#ffa62e; --accent-2:#ffd49b; --accent-rgb:255 166 46; }
 
@@ -44,16 +46,27 @@ svg { width:1em; height:1em; fill:none; stroke:currentColor; stroke-width:1.7; s
 .clockface__time,.clockface__now,.today b,kbd,.set__date,.mono { font-variant-numeric:tabular-nums; }
 
 /* ---- background ---- */
-.bg { position:fixed; inset:-20vmax; z-index:-2;
-  background:radial-gradient(120% 120% at 50% 0%, var(--bg-2), var(--bg) 60%); }
-.blob { position:absolute; border-radius:50%; filter:blur(90px); opacity:.5; will-change:transform; }
-.blob--1 { width:46vmax; height:46vmax; left:4%; top:2%; background:rgb(var(--accent-rgb)/.40); animation:drift1 44s var(--ease) infinite alternate; }
-.blob--2 { width:38vmax; height:38vmax; right:2%; top:28%; background:rgb(var(--accent-rgb)/.22); animation:drift2 58s var(--ease) infinite alternate; }
-.blob--3 { width:30vmax; height:30vmax; left:38%; bottom:0; background:rgb(80 110 255/.18); animation:drift3 72s var(--ease) infinite alternate; }
-[data-theme="light"] .blob { opacity:.35; }
-@keyframes drift1 { to { transform:translate3d(14vmax,8vmax,0) scale(1.18); } }
-@keyframes drift2 { to { transform:translate3d(-12vmax,12vmax,0) scale(.86); } }
-@keyframes drift3 { to { transform:translate3d(10vmax,-10vmax,0) scale(1.1); } }
+/* Flat black with a hairline grid and a corner wash — a plotted terminal
+   screen rather than a wallpaper. No blurred colour clouds. */
+.bg {
+  position:fixed; inset:0; z-index:-2; background:var(--bg);
+  background-image:
+    linear-gradient(to right, rgb(255 255 255/.022) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(255 255 255/.022) 1px, transparent 1px);
+  background-size:72px 72px, 72px 72px;
+}
+.bg::after {
+  content:""; position:absolute; inset:0;
+  background:
+    radial-gradient(70% 55% at 88% 2%, rgb(var(--accent-rgb)/.07), transparent 70%),
+    radial-gradient(90% 70% at 50% 120%, rgb(0 0 0/.6), transparent 60%);
+}
+[data-theme="light"] .bg {
+  background-image:
+    linear-gradient(to right, rgb(10 10 14/.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(10 10 14/.045) 1px, transparent 1px);
+}
+.blob { display:none; }
 
 .grain {
   position:fixed; inset:0; z-index:-1; pointer-events:none; opacity:.32; mix-blend-mode:overlay;
@@ -101,10 +114,15 @@ svg { width:1em; height:1em; fill:none; stroke:currentColor; stroke-width:1.7; s
 }
 
 /* ---- task ---- */
-.task { width:min(620px,100%); text-align:center; }
+.task { position:relative; width:min(620px,100%); text-align:left; }
+/* a prompt caret rather than a centred hero line */
+.task::before {
+  content:"▸"; position:absolute; left:2px; top:10px;
+  font-family:var(--mono); font-size:13px; color:var(--accent); pointer-events:none;
+}
 .task__input {
-  width:100%; padding:6px 10px; font-size:clamp(20px,3.4vw,30px); font-weight:500;
-  letter-spacing:-.02em; text-align:center; background:transparent; border:0;
+  width:100%; padding:6px 10px 6px 24px; font-size:clamp(19px,2.8vw,26px); font-weight:600;
+  letter-spacing:-.015em; text-align:left; background:transparent; border:0;
   border-bottom:1px solid transparent; transition:border-color .2s, background .2s;
 }
 .task__input::placeholder { color:var(--faint); }
@@ -123,7 +141,7 @@ svg { width:1em; height:1em; fill:none; stroke:currentColor; stroke-width:1.7; s
 .cb { position:relative; display:grid; place-items:center; width:16px; height:16px; flex:none; }
 .cb input { position:absolute; inset:0; opacity:0; margin:0; cursor:pointer; }
 .cb__ui { width:15px; height:15px; border:1.5px solid var(--line-2); border-radius:4px; transition:background .16s, border-color .16s; }
-.cb input:checked + .cb__ui { background:var(--accent); border-color:var(--accent); box-shadow:0 0 12px -2px rgb(var(--accent-rgb)/.7); }
+.cb input:checked + .cb__ui { background:var(--accent); border-color:var(--accent); }
 .cb input:checked + .cb__ui::after {
   content:""; display:block; width:7px; height:4px; margin:3px auto 0;
   border:1.6px solid var(--bg); border-top:0; border-right:0; transform:rotate(-45deg);
@@ -136,7 +154,7 @@ svg { width:1em; height:1em; fill:none; stroke:currentColor; stroke-width:1.7; s
 .ring__fill {
   stroke:url(#ringGrad); stroke-width:5; stroke-linecap:round;
   transition:stroke-dashoffset .35s linear;
-  filter:drop-shadow(0 0 10px rgb(var(--accent-rgb)/.55));
+  filter:drop-shadow(0 0 3px rgb(var(--accent-rgb)/.35));
 }
 .is-ending .ring__fill { animation:pulse 2.6s ease-in-out infinite; }
 .is-ending .clockface__time { animation:pulseText 2.6s ease-in-out infinite; }
@@ -151,29 +169,32 @@ svg { width:1em; height:1em; fill:none; stroke:currentColor; stroke-width:1.7; s
 /* ---- chips, controls ---- */
 .modes { display:flex; gap:6px; flex-wrap:wrap; justify-content:center; }
 .chip {
-  padding:7px 14px; font-size:12.5px; font-weight:500; color:var(--muted);
-  background:var(--surface); border:1px solid transparent; border-radius:999px;
-  cursor:pointer; white-space:nowrap; transition:color .18s, background .18s, border-color .18s;
+  padding:7px 13px; font-family:var(--mono); font-size:10.5px; font-weight:400;
+  letter-spacing:.08em; text-transform:uppercase; color:var(--muted);
+  background:transparent; border:1px solid var(--line-2); border-radius:var(--r-sm);
+  cursor:pointer; white-space:nowrap; transition:color .15s, background .15s, border-color .15s;
 }
-.chip:hover { color:var(--text); background:var(--surface-2); }
-.chip.is-on { color:var(--bg); background:var(--accent); border-color:var(--accent); box-shadow:0 0 20px -6px rgb(var(--accent-rgb)/.8); }
+.chip:hover { color:var(--text); border-color:var(--text); }
+.chip.is-on { color:var(--bg); background:var(--accent); border-color:var(--accent); }
 [data-theme="light"] .chip.is-on { color:#fff; }
 
 .controls { display:flex; align-items:center; gap:10px; }
 .btn {
-  display:inline-flex; align-items:center; gap:8px; padding:11px 18px; font-size:13.5px; font-weight:600;
-  border:1px solid var(--line); border-radius:999px; background:var(--surface); cursor:pointer;
-  transition:background .18s, border-color .18s, transform .14s, box-shadow .25s, color .18s;
+  display:inline-flex; align-items:center; gap:8px; padding:12px 18px;
+  font-family:var(--mono); font-size:11px; font-weight:500;
+  letter-spacing:.12em; text-transform:uppercase;
+  border:1px solid var(--line-2); border-radius:var(--r-sm); background:transparent;
+  cursor:pointer; transition:background .15s, border-color .15s, color .15s;
 }
-.btn svg { font-size:15px; }
-.btn:hover { background:var(--surface-2); border-color:var(--line-2); }
-.btn:active { transform:scale(.97); }
-.btn--sm { padding:8px 14px; font-size:12.5px; }
+.btn svg { font-size:14px; }
+.btn:hover { background:var(--surface-2); border-color:var(--text); }
+.btn:active { translate:0 1px; }
+.btn--sm { padding:9px 14px; font-size:10.5px; }
 .btn--ghost { color:var(--muted); }
 .btn--ghost:hover { color:var(--text); }
 .btn--primary {
-  min-width:142px; justify-content:center; padding:13px 26px; font-size:14.5px;
-  color:var(--bg); background:var(--accent); border-color:var(--accent); box-shadow:var(--glow);
+  min-width:152px; justify-content:center; padding:13px 26px; font-size:11.5px;
+  color:var(--bg); background:var(--accent); border-color:var(--accent);
 }
 [data-theme="light"] .btn--primary { color:#fff; }
 .btn--primary:hover { background:var(--accent-2); border-color:var(--accent-2); }
@@ -183,7 +204,7 @@ svg { width:1em; height:1em; fill:none; stroke:currentColor; stroke-width:1.7; s
 
 .cycle { display:flex; gap:7px; }
 .dot { width:6px; height:6px; border-radius:50%; background:var(--line-2); transition:background .25s, box-shadow .25s; }
-.dot.is-on { background:var(--accent); box-shadow:0 0 10px -1px rgb(var(--accent-rgb)/.9); }
+.dot.is-on { background:var(--accent); }
 
 /* ---- sets panel ---- */
 .panel {
@@ -295,8 +316,25 @@ svg { width:1em; height:1em; fill:none; stroke:currentColor; stroke-width:1.7; s
   width:100%; padding:9px 11px; font-size:13.5px; font-family:var(--mono); color:var(--text);
   background:var(--surface); border:1px solid var(--line); border-radius:var(--r-sm); appearance:none;
 }
-.field select { font-family:var(--ui); cursor:pointer; }
-.field input:focus, .field select:focus { outline:0; border-color:var(--accent); background:var(--surface-2); }
+/* The popup list of a <select> is drawn by the OS, not by this stylesheet,
+   so it renders white on a dark page unless the element declares its own
+   colour scheme. These two rules are what make the open dropdown dark. */
+select, option { color-scheme: dark; }
+[data-theme="light"] select, [data-theme="light"] option { color-scheme: light; }
+.field select {
+  font-family:var(--ui); cursor:pointer;
+  /* room for the chevron drawn below, and no native arrow */
+  padding-right:30px;
+  background-image:linear-gradient(45deg, transparent 50%, var(--muted) 50%),
+                   linear-gradient(135deg, var(--muted) 50%, transparent 50%);
+  background-position:calc(100% - 15px) calc(50% + 1px), calc(100% - 10px) calc(50% + 1px);
+  background-size:5px 5px, 5px 5px;
+  background-repeat:no-repeat;
+}
+.field select option { background:#15151b; color:#ecedf1; }
+[data-theme="light"] .field select option { background:#fff; color:#14141a; }
+.field input:focus, .field select:focus { outline:0; border-color:var(--accent); background-color:var(--surface-2); }
+.field select:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
 .field i { font-style:normal; font-size:12px; color:var(--faint); }
 .field--row { display:flex; align-items:center; gap:10px; margin-top:12px; }
 .field--row > span:first-child { margin:0; flex:none; }
@@ -307,7 +345,7 @@ svg { width:1em; height:1em; fill:none; stroke:currentColor; stroke-width:1.7; s
 .range { -webkit-appearance:none; appearance:none; flex:1; height:4px; border-radius:99px; background:var(--line-2); cursor:pointer; }
 .range::-webkit-slider-thumb {
   -webkit-appearance:none; width:16px; height:16px; border-radius:50%; border:0;
-  background:var(--accent); box-shadow:0 0 12px -2px rgb(var(--accent-rgb)/.9);
+  background:var(--accent);
 }
 .range::-moz-range-thumb { width:16px; height:16px; border-radius:50%; border:0; background:var(--accent); }
 
@@ -329,7 +367,7 @@ svg { width:1em; height:1em; fill:none; stroke:currentColor; stroke-width:1.7; s
   cursor:pointer; padding:0; transition:transform .16s, border-color .16s, box-shadow .16s;
 }
 .swatch:hover { transform:scale(1.08); }
-.swatch.is-on { border-color:var(--text); box-shadow:0 0 18px -4px var(--sw); }
+.swatch.is-on { border-color:var(--text); }
 
 .keys { display:grid; grid-template-columns:auto 1fr; gap:10px 16px; align-items:center; font-size:12.5px; }
 .keys dd { color:var(--muted); }
