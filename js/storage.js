@@ -69,7 +69,7 @@ const ACCENT_MIGRATION = {
 };
 
 /** Chimes that existed in earlier versions and still do. */
-const KNOWN_CHIMES = ['siren', 'ukg', 'bell', 'pad', 'marimba', 'sub'];
+const KNOWN_CHIMES = ['ogsiren', 'siren', 'ukg', 'bell', 'pad', 'marimba', 'sub'];
 
 /**
  * Bring a stored settings object up to the current schema. Existing choices

@@ -25,9 +25,66 @@ function audio() {
   return ctx;
 }
 
-/** Unlock audio during a user gesture, so the alarm can sound later. */
+/* ---- sampled chimes --------------------------------------------------
+   Everything else here is synthesised. These are real recordings supplied
+   by the person running the site, served from audio/.                    */
+
+/** @type {Record<string, {url: string, label: string}>} */
+export const SAMPLES = {
+  ogsiren: { url: 'audio/og-dub-siren.mp3', label: 'OG dub siren' },
+};
+
+/** @type {Map<string, AudioBuffer>} */
+const buffers = new Map();
+/** @type {Map<string, Promise<AudioBuffer|null>>} */
+const pending = new Map();
+/** @type {Set<string>} */
+const failed = new Set();
+
+/**
+ * Fetch and decode a sample once, caching the result.
+ * @param {string} name
+ * @returns {Promise<AudioBuffer|null>}
+ */
+async function loadSample(name) {
+  if (buffers.has(name)) return buffers.get(name);
+  if (pending.has(name)) return pending.get(name);
+  if (failed.has(name)) return null;
+
+  const ac = audio();
+  if (!ac || !SAMPLES[name]) return null;
+
+  const task = (async () => {
+    try {
+      const res = await fetch(SAMPLES[name].url, { cache: 'force-cache' });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const buffer = await ac.decodeAudioData(await res.arrayBuffer());
+      buffers.set(name, buffer);
+      return buffer;
+    } catch {
+      /* a missing or undecodable file falls back to the synth siren */
+      failed.add(name);
+      return null;
+    } finally {
+      pending.delete(name);
+    }
+  })();
+
+  pending.set(name, task);
+  return task;
+}
+
+/**
+ * @param {string} name
+ * @returns {boolean} whether the sample is decoded and ready
+ */
+export function isSampleReady(name) {
+  return buffers.has(name);
+}
+
+/** Unlock audio during a user gesture, and start fetching the samples. */
 export function warmUp() {
-  audio();
+  if (audio()) Object.keys(SAMPLES).forEach(loadSample);
 }
 
 /**
@@ -274,7 +331,8 @@ export const CHIMES = {
 
 /** Menu labels, in menu order. */
 export const CHIME_LABELS = {
-  siren: 'Dub siren',
+  ogsiren: 'OG dub siren',
+  siren: 'Dub siren (synth)',
   ukg: 'UKG organ stab',
   bell: 'Soft bell',
   pad: 'Warm synth pad',
@@ -292,9 +350,51 @@ export const CHIME_LABELS = {
 export function play(name, volume, scale = 1) {
   const ac = audio();
   if (!ac) return 0;
-  const fn = CHIMES[name] || CHIMES.siren;
+  const level = Math.max(0, volume) * scale;
+
+  if (SAMPLES[name]) {
+    const buffer = buffers.get(name);
+    if (buffer) return playBuffer(ac, buffer, level);
+    /* not decoded yet: start it, and use the synth siren this time round */
+    loadSample(name);
+    return playSynth(ac, CHIMES.siren, level);
+  }
+  return playSynth(ac, CHIMES[name] || CHIMES.siren, level);
+}
+
+/**
+ * @param {AudioContext} ac
+ * @param {Chime} fn
+ * @param {number} level
+ * @returns {number}
+ */
+function playSynth(ac, fn, level) {
   try {
-    return fn(ac, ac.currentTime + 0.02, bus(ac, Math.max(0, volume) * scale)) || 1;
+    return fn(ac, ac.currentTime + 0.02, bus(ac, level)) || 1;
+  } catch {
+    return 0;
+  }
+}
+
+/** Sources currently sounding, so the alarm can be cut off mid-sample. */
+/** @type {Set<AudioBufferSourceNode>} */
+const activeSources = new Set();
+
+/**
+ * @param {AudioContext} ac
+ * @param {AudioBuffer} buffer
+ * @param {number} level
+ * @returns {number} the sample's length in seconds
+ */
+function playBuffer(ac, buffer, level) {
+  try {
+    const src = ac.createBufferSource();
+    src.buffer = buffer;
+    src.connect(bus(ac, level));
+    src.start(ac.currentTime + 0.02);
+    activeSources.add(src);
+    src.onended = () => activeSources.delete(src);
+    return buffer.duration;
   } catch {
     return 0;
   }
@@ -328,21 +428,27 @@ function emitRingChange() {
  * Ring until dismissed or `repeats` is reached.
  * @param {import('./state.js').ChimeName} name
  * @param {number} volume
- * @param {{repeats?: number, gapMs?: number}} [opts]
+ * @param {{repeats?: number, gapMs?: number, maxMs?: number}} [opts]
  * @returns {boolean} whether the alarm started
  */
-export function startAlarm(name, volume, { repeats = 9, gapMs = 2000 } = {}) {
+export function startAlarm(name, volume, { repeats = 9, gapMs = 2000, maxMs = 25000 } = {}) {
   stopAlarm();
   if (!isSupported()) return false;
 
+  const startedAt = Date.now();
   let fired = 0;
+
   const fire = () => {
     const length = play(name, volume);
     if (!length) { stopAlarm(); return; }
     fired += 1;
-    if (fired >= repeats) { stopAlarm(); return; }
-    /* leave a gap after the sound itself, so repeats never overlap */
-    alarmTimer = window.setTimeout(fire, Math.max(gapMs, length * 1000 + 250));
+
+    /* Stop on whichever limit comes first. A long sample would otherwise
+       ring for the best part of a minute. */
+    const gap = Math.max(gapMs, length * 1000 + 250);
+    if (fired >= repeats || Date.now() - startedAt + gap > maxMs) { stopAlarm(); return; }
+
+    alarmTimer = window.setTimeout(fire, gap);
   };
 
   ringing = true;
@@ -357,6 +463,11 @@ export function stopAlarm() {
     clearTimeout(alarmTimer);
     alarmTimer = null;
   }
+  /* cut a sample off mid-play, otherwise dismissing leaves it sounding */
+  for (const src of activeSources) {
+    try { src.stop(); } catch { /* already ended */ }
+  }
+  activeSources.clear();
   if (ringing) {
     ringing = false;
     emitRingChange();

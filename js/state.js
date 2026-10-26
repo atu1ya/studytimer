@@ -8,7 +8,7 @@ import { KEYS, read, write, migrateSettings } from './storage.js';
 
 /**
  * @typedef {'focus'|'short'|'long'} Mode
- * @typedef {'siren'|'ukg'|'bell'|'pad'|'marimba'|'sub'} ChimeName
+ * @typedef {'ogsiren'|'siren'|'ukg'|'bell'|'pad'|'marimba'|'sub'} ChimeName
  * @typedef {'blue'|'orange'|'green'|'indigo'} Accent
  * @typedef {'light'|'dark'|'system'} ThemePref
  */
@@ -79,7 +79,7 @@ export const DEFAULT_SETTINGS = {
   theme: 'system',
   accent: 'blue',
   volume: 0.6,
-  focusChime: 'siren',
+  focusChime: 'ogsiren',
   breakChime: 'marimba',
   warn: true,
   notify: false,
