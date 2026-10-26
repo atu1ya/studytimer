@@ -383,15 +383,25 @@ body.focus-mode .clockwrap { width:clamp(280px, min(62vh, 76vw), 520px); }
   .stage { min-height:calc(100dvh - var(--topbar)); }
 }
 @media (max-width:560px) {
-  :root { --topbar:52px; }
-  .today { font-size:10.5px; gap:8px; }
+  :root { --topbar:52px; --gutter:14px; }
+  /* Six 36px icons plus the brand and the stats overflow a phone, which
+     clipped the last button. Shrink the controls and let the stats block
+     be the thing that gives way. */
+  .topbar { gap:8px; }
+  .icon { width:32px; height:32px; font-size:15px; border-radius:9px; }
+  .iconbar { gap:2px; margin-left:auto; }
+  .today { font-size:10.5px; gap:8px; min-width:0; overflow:hidden; }
+  .brand { flex:none; }
   .panel { width:100vw; max-height:88dvh; }
   .set { grid-template-columns:76px minmax(0,1fr) auto; }
   .controls .btn--ghost span { display:none; }
   .controls .btn--ghost { padding:11px 13px; }
   .btn--primary { min-width:124px; }
 }
-@media (max-width:380px) { .today__sep, .today span:last-of-type { display:none; } }
+@media (max-width:470px) { .today__sep, .today span:last-of-type { display:none; } }
+/* On a phone the wordmark and the six controls already fill the bar, so the
+   day's totals step aside rather than pushing the last button off-screen. */
+@media (max-width:430px) { .today { display:none; } }
 
 @media (prefers-reduced-motion:reduce) {
   *, *::before, *::after { animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important; }
