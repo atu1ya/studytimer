@@ -29,7 +29,9 @@
   --sidebar-w: 360px;
   --stage-w: 560px;
 
-  /* light appearance */
+  /* light appearance. color-scheme drives every native widget — the select
+     popup, scrollbars, inputs — so it is set here, not per control. */
+  color-scheme: light;
   --bg: #ffffff;
   --bg-grouped: #f2f2f7;
   --bg-elevated: #ffffff;
@@ -55,6 +57,7 @@
 /* dark appearance: follows the OS unless a theme is pinned */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
+    color-scheme: dark;
     --bg: #000000;
     --bg-grouped: #1c1c1e;
     --bg-elevated: #2c2c2e;
@@ -69,6 +72,7 @@
   }
 }
 :root[data-theme="dark"] {
+  color-scheme: dark;
   --bg: #000000;
   --bg-grouped: #1c1c1e;
   --bg-elevated: #2c2c2e;
@@ -319,6 +323,25 @@ svg {
   position: sticky; top: var(--bar-h);
   max-height: calc(100dvh - var(--bar-h));
 }
+/* drag handle on the sidebar's leading edge */
+.resizer {
+  position: absolute; left: 0; top: 0; bottom: 0;
+  width: 9px; margin-left: -5px;
+  cursor: col-resize;
+  background: transparent;
+  touch-action: none;
+  z-index: 2;
+}
+.resizer::after {
+  content: ""; position: absolute; left: 4px; top: 0; bottom: 0;
+  width: 1px; background: transparent;
+  transition: background-color 0.15s ease;
+}
+.resizer:hover::after, .resizer:focus-visible::after, .is-resizing .resizer::after { background: var(--accent); }
+.resizer:focus-visible { outline: none; }
+body.is-resizing { cursor: col-resize; user-select: none; }
+body.is-resizing iframe { pointer-events: none; }
+
 .panel__bar {
   display: flex; align-items: center; gap: var(--sp-1);
   padding: var(--sp-2) var(--sp-2) var(--sp-2) var(--sp-4);
@@ -334,15 +357,14 @@ svg {
 }
 
 .filters { padding: var(--sp-3) 0 var(--sp-2); }
+/* chips wrap onto as many lines as they need: a horizontal scroller just
+   sliced the last one in half at narrow widths */
 .filters__row {
-  display: flex; gap: var(--sp-2);
+  display: flex; flex-wrap: wrap; gap: var(--sp-2);
   padding: 0 var(--sp-4) var(--sp-2);
-  overflow-x: auto;
-  scrollbar-width: none;
 }
-.filters__row::-webkit-scrollbar { display: none; }
 
-.pill { flex: none; }
+.pill { flex: 0 1 auto; min-width: 0; }
 .pill__input { position: absolute; opacity: 0; width: 0; height: 0; }
 .pill__text {
   display: block; padding: 6px var(--sp-3);
@@ -494,13 +516,11 @@ svg {
   background: var(--fill); border: 0; border-radius: var(--radius-8);
 }
 .row select {
+  max-width: 180px;
   padding: 6px var(--sp-2);
   font-size: var(--text-15);
   background: var(--fill); border: 0; border-radius: var(--radius-8);
-  color-scheme: light;
 }
-:root[data-theme="dark"] .row select,
-:root:not([data-theme="light"]) .row select { color-scheme: dark; }
 
 /* switch */
 .switch {

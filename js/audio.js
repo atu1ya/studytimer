@@ -54,53 +54,54 @@ export const CHIMES = {
    * the default alarm, and it is meant to cut through music.
    */
   siren(ac, t, out) {
+    const WAIL = 2.0;
+
+    /* dub echo: a short delay fed back on itself */
     const delay = ac.createDelay(1);
-    delay.delayTime.value = 0.19;
-    const fb = ac.createGain();
-    fb.gain.value = 0.42;
+    delay.delayTime.value = 0.21;
+    const feedback = ac.createGain();
+    feedback.gain.value = 0.5;
     const wet = ac.createGain();
-    wet.gain.value = 0.4;
-    delay.connect(fb);
-    fb.connect(delay);
+    wet.gain.value = 0.45;
+    delay.connect(feedback);
+    feedback.connect(delay);
     delay.connect(wet);
     wet.connect(out);
 
-    const lp = ac.createBiquadFilter();
-    lp.type = 'lowpass';
-    lp.frequency.value = 2800;
-    lp.Q.value = 4;
-    lp.connect(out);
-    lp.connect(delay);
+    /* bandpass keeps the square wave from being shrill */
+    const bp = ac.createBiquadFilter();
+    bp.type = 'bandpass';
+    bp.frequency.value = 1300;
+    bp.Q.value = 1.1;
+    bp.connect(out);
+    bp.connect(delay);
 
     const osc = ac.createOscillator();
-    osc.type = 'sawtooth';
-    const f = osc.frequency;
-    f.setValueAtTime(420, t);
-    f.exponentialRampToValueAtTime(1500, t + 0.18);
-    f.exponentialRampToValueAtTime(880, t + 0.36);
-    f.exponentialRampToValueAtTime(1700, t + 0.56);
-    f.exponentialRampToValueAtTime(760, t + 0.8);
-    f.exponentialRampToValueAtTime(1450, t + 1.0);
+    osc.type = 'square';
+    osc.frequency.setValueAtTime(880, t);
 
-    /* vibrato gives it the hand-wobbled siren character */
+    /* the wail itself: a triangle LFO swinging the pitch, speeding up
+       slightly across the sound as if someone were riding the knob */
     const lfo = ac.createOscillator();
-    lfo.frequency.value = 11;
-    const lfoGain = ac.createGain();
-    lfoGain.gain.value = 55;
-    lfo.connect(lfoGain);
-    lfoGain.connect(f);
+    lfo.type = 'triangle';
+    lfo.frequency.setValueAtTime(5.5, t);
+    lfo.frequency.linearRampToValueAtTime(8, t + WAIL);
+    const depth = ac.createGain();
+    depth.gain.value = 520;
+    lfo.connect(depth);
+    depth.connect(osc.frequency);
 
     const env = ac.createGain();
     env.gain.setValueAtTime(0, t);
-    env.gain.linearRampToValueAtTime(0.5, t + 0.03);
-    env.gain.setValueAtTime(0.5, t + 0.95);
-    env.gain.exponentialRampToValueAtTime(0.0001, t + 1.25);
+    env.gain.linearRampToValueAtTime(0.28, t + 0.04);
+    env.gain.setValueAtTime(0.28, t + WAIL - 0.3);
+    env.gain.exponentialRampToValueAtTime(0.0001, t + WAIL);
     osc.connect(env);
-    env.connect(lp);
+    env.connect(bp);
 
-    osc.start(t); osc.stop(t + 1.3);
-    lfo.start(t); lfo.stop(t + 1.3);
-    return 1.8; // including the echo tail
+    osc.start(t); osc.stop(t + WAIL + 0.05);
+    lfo.start(t); lfo.stop(t + WAIL + 0.05);
+    return WAIL + 0.9; // including the echo tail
   },
 
   /** UK garage: syncopated drawbar-organ stabs over a sub, with a hat skip. */

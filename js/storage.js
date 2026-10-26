@@ -15,6 +15,7 @@ export const KEYS = {
   stats: 'dw.stats',
   favs: 'dw.favs',
   scHint: 'dw.seenScHint',
+  sidebar: 'dw.sidebarWidth',
 };
 
 /**

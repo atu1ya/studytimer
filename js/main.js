@@ -17,6 +17,7 @@ import * as task from './ui/task.js';
 import * as settings from './ui/settings.js';
 import * as panel from './ui/panel.js';
 import * as alarm from './ui/alarm.js';
+import * as resizer from './ui/resizer.js';
 
 const $ = (id) => document.getElementById(id);
 const all = (sel) => [...document.querySelectorAll(sel)];
@@ -135,6 +136,8 @@ function boot() {
     emptyState: $('sets-empty'),
     errorState: $('sets-error'),
   });
+
+  resizer.init($('panel-resizer'));
 
   alarm.init(
     {
