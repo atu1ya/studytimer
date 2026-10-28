@@ -1,6 +1,343 @@
 {
-  "updatedAt": "2026-10-27T10:32:50.153Z",
+  "updatedAt": "2026-10-28T11:20:33.312Z",
   "sets": [
+    {
+      "id": "yt:cYlwzMRw9eg",
+      "source": "youtube",
+      "videoId": "cYlwzMRw9eg",
+      "url": "https://www.youtube.com/watch?v=cYlwzMRw9eg",
+      "title": "Queen Paramount | Brussels, Belgium | Keep Hush Live x BREAXX",
+      "channel": "Keep Hush",
+      "published": null,
+      "publishedApprox": true,
+      "durationMs": 3402000,
+      "tags": [
+        "keep hush",
+        "uk garage",
+        "bass"
+      ],
+      "firstSeen": "2026-10-28T11:20:33.310Z"
+    },
+    {
+      "id": "yt:6HGYxNGgggY",
+      "source": "youtube",
+      "videoId": "6HGYxNGgggY",
+      "url": "https://www.youtube.com/watch?v=6HGYxNGgggY",
+      "title": "KŌMA | Brussels, Belgium | Keep Hush Live x BREAXX",
+      "channel": "Keep Hush",
+      "published": null,
+      "publishedApprox": true,
+      "durationMs": 3525000,
+      "tags": [
+        "keep hush",
+        "uk garage",
+        "bass"
+      ],
+      "firstSeen": "2026-10-28T11:20:33.310Z"
+    },
+    {
+      "id": "yt:e3bCWQsuoNA",
+      "source": "youtube",
+      "videoId": "e3bCWQsuoNA",
+      "url": "https://www.youtube.com/watch?v=e3bCWQsuoNA",
+      "title": "BEKEFI | Cyprus | Keep Hush Live x Utopia",
+      "channel": "Keep Hush",
+      "published": null,
+      "publishedApprox": true,
+      "durationMs": 3663000,
+      "tags": [
+        "keep hush",
+        "uk garage",
+        "bass"
+      ],
+      "firstSeen": "2026-10-28T11:20:33.310Z"
+    },
+    {
+      "id": "yt:8PWm6c9dJeY",
+      "source": "youtube",
+      "videoId": "8PWm6c9dJeY",
+      "url": "https://www.youtube.com/watch?v=8PWm6c9dJeY",
+      "title": "astrochimp | Cyprus | Keep Hush Live x Utopia",
+      "channel": "Keep Hush",
+      "published": null,
+      "publishedApprox": true,
+      "durationMs": 3510000,
+      "tags": [
+        "keep hush",
+        "uk garage",
+        "bass"
+      ],
+      "firstSeen": "2026-10-28T11:20:33.310Z"
+    },
+    {
+      "id": "yt:vk-qw1u1A2k",
+      "source": "youtube",
+      "videoId": "vk-qw1u1A2k",
+      "url": "https://www.youtube.com/watch?v=vk-qw1u1A2k",
+      "title": "Camille Doe | Cyprus | Keep Hush Live x Utopia",
+      "channel": "Keep Hush",
+      "published": null,
+      "publishedApprox": true,
+      "durationMs": 3275000,
+      "tags": [
+        "keep hush",
+        "uk garage",
+        "bass"
+      ],
+      "firstSeen": "2026-10-28T11:20:33.310Z"
+    },
+    {
+      "id": "yt:cyShcuGS-PE",
+      "source": "youtube",
+      "videoId": "cyShcuGS-PE",
+      "url": "https://www.youtube.com/watch?v=cyShcuGS-PE",
+      "title": "ANDREA | Cyprus | Keep Hush Live x Utopia",
+      "channel": "Keep Hush",
+      "published": null,
+      "publishedApprox": true,
+      "durationMs": 3630000,
+      "tags": [
+        "keep hush",
+        "uk garage",
+        "bass"
+      ],
+      "firstSeen": "2026-10-28T11:20:33.310Z"
+    },
+    {
+      "id": "yt:r4O8kFIhLT4",
+      "source": "youtube",
+      "videoId": "r4O8kFIhLT4",
+      "url": "https://www.youtube.com/watch?v=r4O8kFIhLT4",
+      "title": "Rohaan | Cyprus | Keep Hush Live x Utopia",
+      "channel": "Keep Hush",
+      "published": null,
+      "publishedApprox": true,
+      "durationMs": 3640000,
+      "tags": [
+        "keep hush",
+        "uk garage",
+        "bass"
+      ],
+      "firstSeen": "2026-10-28T11:20:33.310Z"
+    },
+    {
+      "id": "yt:r_NuMh_xQCA",
+      "source": "youtube",
+      "videoId": "r_NuMh_xQCA",
+      "url": "https://www.youtube.com/watch?v=r_NuMh_xQCA",
+      "title": "STYLI | Cyprus | Keep Hush Live x Utopia",
+      "channel": "Keep Hush",
+      "published": null,
+      "publishedApprox": true,
+      "durationMs": 3603000,
+      "tags": [
+        "keep hush",
+        "uk garage",
+        "bass"
+      ],
+      "firstSeen": "2026-10-28T11:20:33.310Z"
+    },
+    {
+      "id": "yt:3aPGPxYwNeQ",
+      "source": "youtube",
+      "videoId": "3aPGPxYwNeQ",
+      "url": "https://www.youtube.com/watch?v=3aPGPxYwNeQ",
+      "title": "Rinse HQ157 | Bridge",
+      "channel": "Rinse FM",
+      "published": null,
+      "publishedApprox": true,
+      "durationMs": 0,
+      "tags": [
+        "rinse",
+        "uk garage",
+        "bass"
+      ],
+      "firstSeen": "2026-10-28T11:20:33.310Z"
+    },
+    {
+      "id": "yt:Q7x_qRCv5jM",
+      "source": "youtube",
+      "videoId": "Q7x_qRCv5jM",
+      "url": "https://www.youtube.com/watch?v=Q7x_qRCv5jM",
+      "title": "Michelle Manetti | Mixmag Lab London",
+      "channel": "Mixmag",
+      "published": null,
+      "publishedApprox": true,
+      "durationMs": 3585000,
+      "tags": [
+        "mixmag",
+        "house",
+        "bass"
+      ],
+      "firstSeen": "2026-10-28T11:20:33.310Z"
+    },
+    {
+      "id": "yt:p6mGXXdbgmI",
+      "source": "youtube",
+      "videoId": "p6mGXXdbgmI",
+      "url": "https://www.youtube.com/watch?v=p6mGXXdbgmI",
+      "title": "Main Phase @TheLotRadio  11-08-2024",
+      "channel": "The Lot Radio",
+      "published": null,
+      "publishedApprox": true,
+      "durationMs": 3473000,
+      "tags": [
+        "main phase",
+        "uk garage"
+      ],
+      "firstSeen": "2026-10-28T11:20:33.310Z"
+    },
+    {
+      "id": "yt:C0N0NeO48bE",
+      "source": "youtube",
+      "videoId": "C0N0NeO48bE",
+      "url": "https://www.youtube.com/watch?v=C0N0NeO48bE",
+      "title": "Skream b2b Ewan McVicar live @ Hideout Festival 2022 [Noa Beach Club, ZRCE Beach, Croatia]",
+      "channel": "EKM CO (ElectrokillMedia)",
+      "published": null,
+      "publishedApprox": true,
+      "durationMs": 3481000,
+      "tags": [
+        "ewan mcvicar",
+        "house",
+        "skream",
+        "bass"
+      ],
+      "firstSeen": "2026-10-28T11:20:33.310Z"
+    },
+    {
+      "id": "yt:FKy6tS-itZU",
+      "source": "youtube",
+      "videoId": "FKy6tS-itZU",
+      "url": "https://www.youtube.com/watch?v=FKy6tS-itZU",
+      "title": "Skream ft. Flowdan | Boiler Room: Liverpool",
+      "channel": "Boiler Room",
+      "published": null,
+      "publishedApprox": true,
+      "durationMs": 3626000,
+      "tags": [
+        "skream",
+        "bass"
+      ],
+      "firstSeen": "2026-10-28T11:20:33.310Z"
+    },
+    {
+      "id": "yt:Mvo7f3j-CxY",
+      "source": "youtube",
+      "videoId": "Mvo7f3j-CxY",
+      "url": "https://www.youtube.com/watch?v=Mvo7f3j-CxY",
+      "title": "Seth Troxler B2B Skream @ Kappa FuturFestival 2024",
+      "channel": "Kappa FuturFestival",
+      "published": null,
+      "publishedApprox": true,
+      "durationMs": 6104000,
+      "tags": [
+        "skream",
+        "bass"
+      ],
+      "firstSeen": "2026-10-28T11:20:33.310Z"
+    },
+    {
+      "id": "yt:77UAaOv-Was",
+      "source": "youtube",
+      "videoId": "77UAaOv-Was",
+      "url": "https://www.youtube.com/watch?v=77UAaOv-Was",
+      "title": "Mall Grab - Live at Lot 613 9/29/2018",
+      "channel": "Daniel Kirby",
+      "published": null,
+      "publishedApprox": true,
+      "durationMs": 10669000,
+      "tags": [
+        "mall grab",
+        "house"
+      ],
+      "firstSeen": "2026-10-28T11:20:33.310Z"
+    },
+    {
+      "id": "yt:t_7AbjAEJAU",
+      "source": "youtube",
+      "videoId": "t_7AbjAEJAU",
+      "url": "https://www.youtube.com/watch?v=t_7AbjAEJAU",
+      "title": "WONDAGURL | Boiler Room LA: heds",
+      "channel": "Boiler Room",
+      "published": null,
+      "publishedApprox": true,
+      "durationMs": 0,
+      "tags": [
+        "boiler room",
+        "house",
+        "bass"
+      ],
+      "firstSeen": "2026-10-28T11:20:33.309Z"
+    },
+    {
+      "id": "yt:HaLqe-Jraz4",
+      "source": "youtube",
+      "videoId": "HaLqe-Jraz4",
+      "url": "https://www.youtube.com/watch?v=HaLqe-Jraz4",
+      "title": "DJ Sliink | Boiler Room LA: heds",
+      "channel": "Boiler Room",
+      "published": null,
+      "publishedApprox": true,
+      "durationMs": 0,
+      "tags": [
+        "boiler room",
+        "house",
+        "bass"
+      ],
+      "firstSeen": "2026-10-28T11:20:33.309Z"
+    },
+    {
+      "id": "yt:iZYGxBtdtsg",
+      "source": "youtube",
+      "videoId": "iZYGxBtdtsg",
+      "url": "https://www.youtube.com/watch?v=iZYGxBtdtsg",
+      "title": "MALIMAN | Brussels, Belgium | Keep Hush Live x BREAXX",
+      "channel": "Keep Hush",
+      "published": null,
+      "publishedApprox": true,
+      "durationMs": 3900000,
+      "tags": [
+        "keep hush",
+        "uk garage",
+        "bass"
+      ],
+      "firstSeen": "2026-10-28T11:20:33.309Z"
+    },
+    {
+      "id": "yt:E2YrGWfFdYs",
+      "source": "youtube",
+      "videoId": "E2YrGWfFdYs",
+      "url": "https://www.youtube.com/watch?v=E2YrGWfFdYs",
+      "title": "Coki | Brussels, Belgium | Keep Hush Live x BREAXX",
+      "channel": "Keep Hush",
+      "published": null,
+      "publishedApprox": true,
+      "durationMs": 3821000,
+      "tags": [
+        "keep hush",
+        "uk garage",
+        "bass"
+      ],
+      "firstSeen": "2026-10-28T11:20:33.309Z"
+    },
+    {
+      "id": "yt:BMoPz-urlSQ",
+      "source": "youtube",
+      "videoId": "BMoPz-urlSQ",
+      "url": "https://www.youtube.com/watch?v=BMoPz-urlSQ",
+      "title": "Pala10 | Brussels, Belgium | Keep Hush Live x BREAXX",
+      "channel": "Keep Hush",
+      "published": null,
+      "publishedApprox": true,
+      "durationMs": 3579000,
+      "tags": [
+        "keep hush",
+        "uk garage",
+        "bass"
+      ],
+      "firstSeen": "2026-10-28T11:20:33.309Z"
+    },
     {
       "id": "yt:YzOhxlN0Mkg",
       "source": "youtube",
@@ -8,7 +345,7 @@
       "url": "https://www.youtube.com/watch?v=YzOhxlN0Mkg",
       "title": "Rinse HQ156 | Elkka",
       "channel": "Rinse FM",
-      "published": null,
+      "published": "2026-10-27T11:19:17.723Z",
       "publishedApprox": true,
       "durationMs": 3725000,
       "tags": [
@@ -149,6 +486,22 @@
       "firstSeen": "2026-10-27T10:32:50.151Z"
     },
     {
+      "id": "yt:w0ZbK8E03y4",
+      "source": "youtube",
+      "videoId": "w0ZbK8E03y4",
+      "url": "https://www.youtube.com/watch?v=w0ZbK8E03y4",
+      "title": "Silva Bumpa - Radio 1 Essential Mix",
+      "channel": "JSnap Archives",
+      "published": "2026-10-26T11:20:31.808Z",
+      "publishedApprox": true,
+      "durationMs": 7200000,
+      "tags": [
+        "silva bumpa",
+        "uk garage"
+      ],
+      "firstSeen": "2026-10-26T11:05:58.433Z"
+    },
+    {
       "id": "yt:WbwH4EQfyTc",
       "source": "youtube",
       "videoId": "WbwH4EQfyTc",
@@ -158,22 +511,6 @@
       "published": null,
       "publishedApprox": true,
       "durationMs": 3694000,
-      "tags": [
-        "silva bumpa",
-        "uk garage"
-      ],
-      "firstSeen": "2026-10-26T11:05:58.433Z"
-    },
-    {
-      "id": "yt:w0ZbK8E03y4",
-      "source": "youtube",
-      "videoId": "w0ZbK8E03y4",
-      "url": "https://www.youtube.com/watch?v=w0ZbK8E03y4",
-      "title": "Silva Bumpa - Radio 1 Essential Mix",
-      "channel": "JSnap Archives",
-      "published": null,
-      "publishedApprox": true,
-      "durationMs": 7200000,
       "tags": [
         "silva bumpa",
         "uk garage"
@@ -4569,6 +4906,125 @@
       "firstSeen": "2026-10-26T04:59:48.577Z"
     },
     {
+      "id": "yt:ffMJU4CvWF0",
+      "source": "youtube",
+      "videoId": "ffMJU4CvWF0",
+      "url": "https://www.youtube.com/watch?v=ffMJU4CvWF0",
+      "title": "Esk with Vic Mensa | Rinse FM",
+      "channel": "Rinse FM",
+      "published": null,
+      "publishedApprox": true,
+      "durationMs": 1989000,
+      "tags": [
+        "rinse",
+        "uk garage",
+        "bass"
+      ],
+      "firstSeen": "2026-10-26T04:59:48.577Z"
+    },
+    {
+      "id": "yt:0-vjavJQxR0",
+      "source": "youtube",
+      "videoId": "0-vjavJQxR0",
+      "url": "https://www.youtube.com/watch?v=0-vjavJQxR0",
+      "title": "Mona Yim B2B Bonobo | Rinse FM",
+      "channel": "Rinse FM",
+      "published": null,
+      "publishedApprox": true,
+      "durationMs": 3633000,
+      "tags": [
+        "rinse",
+        "uk garage",
+        "bass"
+      ],
+      "firstSeen": "2026-10-26T04:59:48.577Z"
+    },
+    {
+      "id": "yt:COfw27ED01Y",
+      "source": "youtube",
+      "videoId": "COfw27ED01Y",
+      "url": "https://www.youtube.com/watch?v=COfw27ED01Y",
+      "title": "Neffa-T b2b Teki Latex | London | Keep Hush Live x Waterworks",
+      "channel": "Keep Hush",
+      "published": null,
+      "publishedApprox": true,
+      "durationMs": 7129000,
+      "tags": [
+        "keep hush",
+        "uk garage",
+        "bass"
+      ],
+      "firstSeen": "2026-10-26T04:59:48.577Z"
+    },
+    {
+      "id": "yt:mz6UaVqLoMU",
+      "source": "youtube",
+      "videoId": "mz6UaVqLoMU",
+      "url": "https://www.youtube.com/watch?v=mz6UaVqLoMU",
+      "title": "JayaHadADream w/ Myrie | London | Keep Hush Live x Waterworks",
+      "channel": "Keep Hush",
+      "published": null,
+      "publishedApprox": true,
+      "durationMs": 1680000,
+      "tags": [
+        "keep hush",
+        "uk garage",
+        "bass"
+      ],
+      "firstSeen": "2026-10-26T04:59:48.577Z"
+    },
+    {
+      "id": "yt:KQc1DvPxebo",
+      "source": "youtube",
+      "videoId": "KQc1DvPxebo",
+      "url": "https://www.youtube.com/watch?v=KQc1DvPxebo",
+      "title": "BNYX | Boiler Room: LA",
+      "channel": "Boiler Room",
+      "published": "2026-10-24T11:19:16.504Z",
+      "publishedApprox": true,
+      "durationMs": 2540000,
+      "tags": [
+        "boiler room",
+        "house",
+        "bass"
+      ],
+      "firstSeen": "2026-10-26T04:59:48.576Z"
+    },
+    {
+      "id": "yt:Bj0lULol6Ac",
+      "source": "youtube",
+      "videoId": "Bj0lULol6Ac",
+      "url": "https://www.youtube.com/watch?v=Bj0lULol6Ac",
+      "title": "ESPRIT 空想 | Boiler Room: LA",
+      "channel": "Boiler Room",
+      "published": "2026-10-24T11:19:16.504Z",
+      "publishedApprox": true,
+      "durationMs": 3151000,
+      "tags": [
+        "boiler room",
+        "house",
+        "bass"
+      ],
+      "firstSeen": "2026-10-26T04:59:48.576Z"
+    },
+    {
+      "id": "yt:7fwMSrtNLEo",
+      "source": "youtube",
+      "videoId": "7fwMSrtNLEo",
+      "url": "https://www.youtube.com/watch?v=7fwMSrtNLEo",
+      "title": "Sematary | Boiler Room: LA",
+      "channel": "Boiler Room",
+      "published": "2026-10-24T11:19:16.504Z",
+      "publishedApprox": true,
+      "durationMs": 2756000,
+      "tags": [
+        "boiler room",
+        "house",
+        "bass"
+      ],
+      "firstSeen": "2026-10-26T04:59:48.576Z"
+    },
+    {
       "id": "yt:a06YJ523PJM",
       "source": "youtube",
       "videoId": "a06YJ523PJM",
@@ -4587,64 +5043,13 @@
       "firstSeen": "2026-10-26T11:05:58.433Z"
     },
     {
-      "id": "yt:KQc1DvPxebo",
-      "source": "youtube",
-      "videoId": "KQc1DvPxebo",
-      "url": "https://www.youtube.com/watch?v=KQc1DvPxebo",
-      "title": "BNYX | Boiler Room: LA",
-      "channel": "Boiler Room",
-      "published": "2026-10-24T10:31:33.572Z",
-      "publishedApprox": true,
-      "durationMs": 2540000,
-      "tags": [
-        "boiler room",
-        "house",
-        "bass"
-      ],
-      "firstSeen": "2026-10-26T04:59:48.576Z"
-    },
-    {
-      "id": "yt:Bj0lULol6Ac",
-      "source": "youtube",
-      "videoId": "Bj0lULol6Ac",
-      "url": "https://www.youtube.com/watch?v=Bj0lULol6Ac",
-      "title": "ESPRIT 空想 | Boiler Room: LA",
-      "channel": "Boiler Room",
-      "published": "2026-10-24T10:31:33.572Z",
-      "publishedApprox": true,
-      "durationMs": 3151000,
-      "tags": [
-        "boiler room",
-        "house",
-        "bass"
-      ],
-      "firstSeen": "2026-10-26T04:59:48.576Z"
-    },
-    {
-      "id": "yt:7fwMSrtNLEo",
-      "source": "youtube",
-      "videoId": "7fwMSrtNLEo",
-      "url": "https://www.youtube.com/watch?v=7fwMSrtNLEo",
-      "title": "Sematary | Boiler Room: LA",
-      "channel": "Boiler Room",
-      "published": "2026-10-24T10:31:33.572Z",
-      "publishedApprox": true,
-      "durationMs": 2756000,
-      "tags": [
-        "boiler room",
-        "house",
-        "bass"
-      ],
-      "firstSeen": "2026-10-26T04:59:48.576Z"
-    },
-    {
       "id": "yt:APe7fhdkp9Q",
       "source": "youtube",
       "videoId": "APe7fhdkp9Q",
       "url": "https://www.youtube.com/watch?v=APe7fhdkp9Q",
       "title": "Dj Smokey | Boiler Room: LA",
       "channel": "Boiler Room",
-      "published": "2026-10-23T10:31:33.572Z",
+      "published": "2026-10-23T11:19:16.504Z",
       "publishedApprox": true,
       "durationMs": 3630000,
       "tags": [
@@ -4661,7 +5066,7 @@
       "url": "https://www.youtube.com/watch?v=kUtl5bEirsA",
       "title": "Kibo with Chamber45, N4T & Lil Skag | Rinse FM",
       "channel": "Rinse FM",
-      "published": "2026-10-22T10:31:34.756Z",
+      "published": "2026-10-22T11:19:17.723Z",
       "publishedApprox": true,
       "durationMs": 1840000,
       "tags": [
@@ -4678,7 +5083,7 @@
       "url": "https://www.youtube.com/watch?v=bd_p6F8GbbQ",
       "title": "FUSE [LIVE] ➔ Enzo Siragusa B2B Interplanetary Criminal @ FUSE Malta 2026",
       "channel": "FUSE London and Interplanetary Criminal",
-      "published": "2026-10-21T10:32:02.188Z",
+      "published": "2026-10-21T11:19:44.649Z",
       "publishedApprox": true,
       "durationMs": 5186000,
       "tags": [
@@ -4694,7 +5099,7 @@
       "url": "https://www.youtube.com/watch?v=BV1E9N8DG3s",
       "title": "Eris Drew & Octo Octa as Alchemical Sisters | Mixmag Lab London",
       "channel": "Mixmag",
-      "published": "2026-10-21T10:31:35.324Z",
+      "published": "2026-10-21T11:19:18.310Z",
       "publishedApprox": true,
       "durationMs": 7016000,
       "tags": [
@@ -4711,7 +5116,7 @@
       "url": "https://www.youtube.com/watch?v=8joQNtp8v0w",
       "title": "7e | Tokyo, Japan | Keep Hush Live x Jungle Party Tribal Connection",
       "channel": "Keep Hush",
-      "published": "2026-10-21T10:31:34.135Z",
+      "published": "2026-10-21T11:19:17.086Z",
       "publishedApprox": true,
       "durationMs": 3690000,
       "tags": [
@@ -4729,7 +5134,7 @@
       "url": "https://www.youtube.com/watch?v=BFUuoAhkeos",
       "title": "DJ YAHMAN | Tokyo, Japan | Keep Hush Live x Jungle Party Tribal Connection",
       "channel": "Keep Hush",
-      "published": "2026-10-21T10:31:34.135Z",
+      "published": "2026-10-21T11:19:17.086Z",
       "publishedApprox": true,
       "durationMs": 2408000,
       "tags": [
@@ -4747,7 +5152,7 @@
       "url": "https://www.youtube.com/watch?v=Gfc3APYun9Y",
       "title": "FELINE | Keep Hush Live x Jungle Party Tribal Connection",
       "channel": "Keep Hush",
-      "published": "2026-10-21T10:31:34.135Z",
+      "published": "2026-10-21T11:19:17.086Z",
       "publishedApprox": true,
       "durationMs": 3658000,
       "tags": [
@@ -4765,7 +5170,7 @@
       "url": "https://www.youtube.com/watch?v=bnH8HwuSX7M",
       "title": "HALU | Tokyo, Japan | Keep Hush Live x Jungle Party Tribal Connection",
       "channel": "Keep Hush",
-      "published": "2026-10-21T10:31:34.135Z",
+      "published": "2026-10-21T11:19:17.086Z",
       "publishedApprox": true,
       "durationMs": 3009000,
       "tags": [
@@ -4783,7 +5188,7 @@
       "url": "https://www.youtube.com/watch?v=6WQjlJmwddk",
       "title": "JUNGLE ROCK, ODE TAIJI, Tenmus 002 | Tokyo, Japan | Keep Hush Live x Jungle Party Tribal Connection",
       "channel": "Keep Hush",
-      "published": "2026-10-21T10:31:34.135Z",
+      "published": "2026-10-21T11:19:17.086Z",
       "publishedApprox": true,
       "durationMs": 5393000,
       "tags": [
@@ -4801,7 +5206,7 @@
       "url": "https://www.youtube.com/watch?v=MuG5nBpFyTQ",
       "title": "Rinse HQ155 | Rae Sada",
       "channel": "Rinse FM",
-      "published": "2026-10-20T10:31:34.756Z",
+      "published": "2026-10-20T11:19:17.723Z",
       "publishedApprox": true,
       "durationMs": 3703000,
       "tags": [
@@ -4818,7 +5223,7 @@
       "url": "https://www.youtube.com/watch?v=5rYaiHSnpVI",
       "title": "Hamdi (DJ Set) @ Niteharts Festival 2026",
       "channel": "Addison",
-      "published": "2026-10-18T10:32:24.736Z",
+      "published": "2026-10-18T11:20:08.537Z",
       "publishedApprox": true,
       "durationMs": 3636000,
       "tags": [
@@ -4834,7 +5239,7 @@
       "url": "https://www.youtube.com/watch?v=ea3w8AXOj20",
       "title": "Radio 1’s Essential Mix with Josh Baker at Amnesia - Sunrise set",
       "channel": "BBC Radio 1 and 3 more",
-      "published": "2026-10-17T10:32:15.981Z",
+      "published": "2026-10-17T11:19:59.331Z",
       "publishedApprox": true,
       "durationMs": 10966000,
       "tags": [
@@ -4850,7 +5255,7 @@
       "url": "https://www.youtube.com/watch?v=NZIsbLxqbrQ",
       "title": "JOSH BAKER b2b PROSPA b2b KETTEMA - MIX 🔥",
       "channel": "WHITTON 🎵🎧",
-      "published": "2026-10-16T10:32:45.715Z",
+      "published": "2026-10-16T11:20:29.053Z",
       "publishedApprox": true,
       "durationMs": 2281000,
       "tags": [
@@ -4868,7 +5273,7 @@
       "url": "https://www.youtube.com/watch?v=NRjnTx-cTd0",
       "title": "Bakey | Mixmag Lab London",
       "channel": "Mixmag",
-      "published": "2026-10-16T10:31:35.324Z",
+      "published": "2026-10-16T11:19:18.310Z",
       "publishedApprox": true,
       "durationMs": 3462000,
       "tags": [
@@ -4885,26 +5290,9 @@
       "url": "https://www.youtube.com/watch?v=TU1wQ3gVABY",
       "title": "Charles Green B2B Tim Reaper | Rinse FM",
       "channel": "Rinse FM",
-      "published": "2026-10-15T10:31:34.756Z",
+      "published": "2026-10-15T11:19:17.723Z",
       "publishedApprox": true,
       "durationMs": 3542000,
-      "tags": [
-        "rinse",
-        "uk garage",
-        "bass"
-      ],
-      "firstSeen": "2026-10-26T04:59:48.577Z"
-    },
-    {
-      "id": "yt:ffMJU4CvWF0",
-      "source": "youtube",
-      "videoId": "ffMJU4CvWF0",
-      "url": "https://www.youtube.com/watch?v=ffMJU4CvWF0",
-      "title": "Esk with Vic Mensa | Rinse FM",
-      "channel": "Rinse FM",
-      "published": "2026-10-15T10:31:34.756Z",
-      "publishedApprox": true,
-      "durationMs": 1989000,
       "tags": [
         "rinse",
         "uk garage",
@@ -4919,7 +5307,7 @@
       "url": "https://www.youtube.com/watch?v=lmxAzbzwk_c",
       "title": "DJ ZINC | London | Keep Hush Live x BOXFRESH",
       "channel": "Keep Hush",
-      "published": "2026-10-15T10:31:34.135Z",
+      "published": "2026-10-15T11:19:17.086Z",
       "publishedApprox": true,
       "durationMs": 3544000,
       "tags": [
@@ -4936,7 +5324,7 @@
       "url": "https://www.youtube.com/watch?v=sXf-ul-_1l0",
       "title": "jawnino w/ CHAMBER45 | London | Keep Hush Live x BOXFRESH",
       "channel": "Keep Hush",
-      "published": "2026-10-15T10:31:34.135Z",
+      "published": "2026-10-15T11:19:17.086Z",
       "publishedApprox": true,
       "durationMs": 1670000,
       "tags": [
@@ -4953,60 +5341,9 @@
       "url": "https://www.youtube.com/watch?v=DQrGcXnZvfo",
       "title": "ALICIA | London | Keep Hush Live x BOXFRESH",
       "channel": "Keep Hush",
-      "published": "2026-10-15T10:31:34.135Z",
+      "published": "2026-10-15T11:19:17.086Z",
       "publishedApprox": true,
       "durationMs": 5118000,
-      "tags": [
-        "keep hush",
-        "uk garage",
-        "bass"
-      ],
-      "firstSeen": "2026-10-26T04:59:48.577Z"
-    },
-    {
-      "id": "yt:0-vjavJQxR0",
-      "source": "youtube",
-      "videoId": "0-vjavJQxR0",
-      "url": "https://www.youtube.com/watch?v=0-vjavJQxR0",
-      "title": "Mona Yim B2B Bonobo | Rinse FM",
-      "channel": "Rinse FM",
-      "published": "2026-10-14T10:31:34.756Z",
-      "publishedApprox": true,
-      "durationMs": 3633000,
-      "tags": [
-        "rinse",
-        "uk garage",
-        "bass"
-      ],
-      "firstSeen": "2026-10-26T04:59:48.577Z"
-    },
-    {
-      "id": "yt:COfw27ED01Y",
-      "source": "youtube",
-      "videoId": "COfw27ED01Y",
-      "url": "https://www.youtube.com/watch?v=COfw27ED01Y",
-      "title": "Neffa-T b2b Teki Latex | London | Keep Hush Live x Waterworks",
-      "channel": "Keep Hush",
-      "published": "2026-10-14T10:31:34.135Z",
-      "publishedApprox": true,
-      "durationMs": 7129000,
-      "tags": [
-        "keep hush",
-        "uk garage",
-        "bass"
-      ],
-      "firstSeen": "2026-10-26T04:59:48.577Z"
-    },
-    {
-      "id": "yt:mz6UaVqLoMU",
-      "source": "youtube",
-      "videoId": "mz6UaVqLoMU",
-      "url": "https://www.youtube.com/watch?v=mz6UaVqLoMU",
-      "title": "JayaHadADream w/ Myrie | London | Keep Hush Live x Waterworks",
-      "channel": "Keep Hush",
-      "published": "2026-10-14T10:31:34.135Z",
-      "publishedApprox": true,
-      "durationMs": 1680000,
       "tags": [
         "keep hush",
         "uk garage",
@@ -5021,7 +5358,7 @@
       "url": "https://www.youtube.com/watch?v=mDtud5fLgFQ",
       "title": "Fred again.. & LATIN MAFIA - Full Mixtape Playback, Palacio De Los Deportes (CDMX, 30th July 2026)",
       "channel": "Fred again . . and LATIN MAFIA",
-      "published": "2026-09-27T10:32:39.661Z",
+      "published": "2026-09-28T11:20:23.349Z",
       "publishedApprox": true,
       "durationMs": 4151000,
       "tags": [
@@ -5037,7 +5374,7 @@
       "url": "https://www.youtube.com/watch?v=DWgZAH8ltjI",
       "title": "Overmono LIVE Los Angeles Hollywood Palladium PURE DEVOTION WORLD TOUR - 9/25/26 FULL SHOW 4K ",
       "channel": "The Nosebleeders Section",
-      "published": "2026-09-27T10:32:36.520Z",
+      "published": "2026-09-28T11:20:20.343Z",
       "publishedApprox": true,
       "durationMs": 5395000,
       "tags": [
@@ -5053,7 +5390,7 @@
       "url": "https://www.youtube.com/watch?v=fT3RuwXAcoE",
       "title": "Overmono - Live at Old Royal Naval College, London. August 2026",
       "channel": "Overmono",
-      "published": "2026-09-27T10:32:36.520Z",
+      "published": "2026-09-28T11:20:20.343Z",
       "publishedApprox": true,
       "durationMs": 5561000,
       "tags": [
@@ -5069,7 +5406,7 @@
       "url": "https://www.youtube.com/watch?v=py9BXXNxjUI",
       "title": "Tuesday night at the snooker club… (Barry Can’t Swim, September 2026)",
       "channel": "Barry Can't Swim",
-      "published": "2026-09-27T10:32:27.807Z",
+      "published": "2026-09-28T11:20:11.490Z",
       "publishedApprox": true,
       "durationMs": 3243000,
       "tags": [
@@ -5085,7 +5422,7 @@
       "url": "https://www.youtube.com/watch?v=B5oMmTW4bxs",
       "title": "Hamdi Live at Breakaway Carolina | September 2026 | Full Set",
       "channel": "HamburgerJoeEDM",
-      "published": "2026-09-27T10:32:24.736Z",
+      "published": "2026-09-28T11:20:08.537Z",
       "publishedApprox": true,
       "durationMs": 3840000,
       "tags": [
@@ -5094,6 +5431,618 @@
         "dance"
       ],
       "firstSeen": "2026-10-26T05:06:50.661Z"
+    },
+    {
+      "id": "yt:1I53sJs24Is",
+      "source": "youtube",
+      "videoId": "1I53sJs24Is",
+      "url": "https://www.youtube.com/watch?v=1I53sJs24Is",
+      "title": "Ewan McVicar DJ Set - Creamfields: APEX 2026 | @beatport",
+      "channel": "Beatport and 2 more",
+      "published": "2026-09-28T11:19:56.267Z",
+      "publishedApprox": true,
+      "durationMs": 5266000,
+      "tags": [
+        "ewan mcvicar",
+        "house"
+      ],
+      "firstSeen": "2026-10-26T05:06:50.660Z"
+    },
+    {
+      "id": "yt:9Xz78hki8Ig",
+      "source": "youtube",
+      "videoId": "9Xz78hki8Ig",
+      "url": "https://www.youtube.com/watch?v=9Xz78hki8Ig",
+      "title": "Salute - All Night Long San Francisco set (5hr)",
+      "channel": "Blazer",
+      "published": "2026-09-28T11:19:53.504Z",
+      "publishedApprox": true,
+      "durationMs": 17794000,
+      "tags": [
+        "salute",
+        "dance"
+      ],
+      "firstSeen": "2026-10-26T11:05:58.433Z"
+    },
+    {
+      "id": "yt:KgZMEcx9mZw",
+      "source": "youtube",
+      "videoId": "KgZMEcx9mZw",
+      "url": "https://www.youtube.com/watch?v=KgZMEcx9mZw",
+      "title": "Main Phase - '95 to '05 House Special | RA Greenhouse Sessions",
+      "channel": "Resident Advisor and AlphaTheta / Pioneer DJ Global",
+      "published": "2026-09-28T11:19:50.637Z",
+      "publishedApprox": true,
+      "durationMs": 4767000,
+      "tags": [
+        "main phase",
+        "uk garage",
+        "house"
+      ],
+      "firstSeen": "2026-10-26T05:06:50.660Z"
+    },
+    {
+      "id": "yt:_r-mWYZQ660",
+      "source": "youtube",
+      "videoId": "_r-mWYZQ660",
+      "url": "https://www.youtube.com/watch?v=_r-mWYZQ660",
+      "title": "Sammy Virji B2B Barry Can't Swim at Ally Pally",
+      "channel": "Sammy Virji and Barry Can't Swim",
+      "published": "2026-09-28T11:19:41.442Z",
+      "publishedApprox": true,
+      "durationMs": 1932000,
+      "tags": [
+        "sammy virji",
+        "uk garage",
+        "barry cant swim",
+        "house",
+        "jungle"
+      ],
+      "firstSeen": "2026-10-26T04:59:48.578Z"
+    },
+    {
+      "id": "yt:Uv1H5AxpxXA",
+      "source": "youtube",
+      "videoId": "Uv1H5AxpxXA",
+      "url": "https://www.youtube.com/watch?v=Uv1H5AxpxXA",
+      "title": "KETTAMA - Reading Festival * Little John's Farm, Reading, UK (Aug 30, 2026 / AUDIO)",
+      "channel": "unrealmedia * spanish",
+      "published": "2026-09-28T11:19:24.756Z",
+      "publishedApprox": true,
+      "durationMs": 5014000,
+      "tags": [
+        "kettama",
+        "house"
+      ],
+      "firstSeen": "2026-10-26T05:06:50.660Z"
+    },
+    {
+      "id": "yt:pIziPTX9er4",
+      "source": "youtube",
+      "videoId": "pIziPTX9er4",
+      "url": "https://www.youtube.com/watch?v=pIziPTX9er4",
+      "title": "Daniel Avery @TheLotRadio 09-22-2026",
+      "channel": "The Lot Radio",
+      "published": "2026-09-28T11:19:19.496Z",
+      "publishedApprox": true,
+      "durationMs": 3539000,
+      "tags": [
+        "the lot radio",
+        "house"
+      ],
+      "firstSeen": "2026-10-26T04:59:48.578Z"
+    },
+    {
+      "id": "yt:F9MJy2mp-Ak",
+      "source": "youtube",
+      "videoId": "F9MJy2mp-Ak",
+      "url": "https://www.youtube.com/watch?v=F9MJy2mp-Ak",
+      "title": "Beyond the Call-Out: Conflict, Harm & Resolution in Nightlife | Beyond the Dancefloor 2026",
+      "channel": "The Lot Radio",
+      "published": "2026-09-28T11:19:19.496Z",
+      "publishedApprox": true,
+      "durationMs": 5826000,
+      "tags": [
+        "the lot radio",
+        "house",
+        "dance"
+      ],
+      "firstSeen": "2026-10-26T04:59:48.578Z"
+    },
+    {
+      "id": "yt:ZhIX0dOy9LY",
+      "source": "youtube",
+      "videoId": "ZhIX0dOy9LY",
+      "url": "https://www.youtube.com/watch?v=ZhIX0dOy9LY",
+      "title": "Jenn Getz | Mixmag Lab London",
+      "channel": "Mixmag",
+      "published": "2026-09-28T11:19:18.310Z",
+      "publishedApprox": true,
+      "durationMs": 3648000,
+      "tags": [
+        "mixmag",
+        "house",
+        "bass"
+      ],
+      "firstSeen": "2026-10-26T04:59:48.577Z"
+    },
+    {
+      "id": "yt:Gc5X1r_naXU",
+      "source": "youtube",
+      "videoId": "Gc5X1r_naXU",
+      "url": "https://www.youtube.com/watch?v=Gc5X1r_naXU",
+      "title": "La La | Mixmag Lab London x Cupra",
+      "channel": "Mixmag",
+      "published": "2026-09-28T11:19:18.310Z",
+      "publishedApprox": true,
+      "durationMs": 3545000,
+      "tags": [
+        "mixmag",
+        "house",
+        "bass"
+      ],
+      "firstSeen": "2026-10-26T04:59:48.577Z"
+    },
+    {
+      "id": "yt:wwN6Fl2Ba5w",
+      "source": "youtube",
+      "videoId": "wwN6Fl2Ba5w",
+      "url": "https://www.youtube.com/watch?v=wwN6Fl2Ba5w",
+      "title": "Mozey d'n'b set | SAFE&SOUND x Burn Energy Tour | Bucharest",
+      "channel": "Mixmag",
+      "published": "2026-09-28T11:19:18.310Z",
+      "publishedApprox": true,
+      "durationMs": 3620000,
+      "tags": [
+        "mixmag",
+        "house",
+        "bass"
+      ],
+      "firstSeen": "2026-10-26T04:59:48.577Z"
+    },
+    {
+      "id": "yt:fjR4idz1-MA",
+      "source": "youtube",
+      "videoId": "fjR4idz1-MA",
+      "url": "https://www.youtube.com/watch?v=fjR4idz1-MA",
+      "title": "Dr Banana | Det Gode Selskab x Burn Energy Tour x Mixmag | Norway",
+      "channel": "Mixmag",
+      "published": "2026-09-28T11:19:18.310Z",
+      "publishedApprox": true,
+      "durationMs": 5106000,
+      "tags": [
+        "mixmag",
+        "house",
+        "bass"
+      ],
+      "firstSeen": "2026-10-26T04:59:48.577Z"
+    },
+    {
+      "id": "yt:xJR7q0XN8oU",
+      "source": "youtube",
+      "videoId": "xJR7q0XN8oU",
+      "url": "https://www.youtube.com/watch?v=xJR7q0XN8oU",
+      "title": "Hot Since 82 | Mixmag Lab London",
+      "channel": "Mixmag",
+      "published": "2026-09-28T11:19:18.310Z",
+      "publishedApprox": true,
+      "durationMs": 7370000,
+      "tags": [
+        "mixmag",
+        "house",
+        "bass"
+      ],
+      "firstSeen": "2026-10-26T04:59:48.577Z"
+    },
+    {
+      "id": "yt:F8JjZcly3xU",
+      "source": "youtube",
+      "videoId": "F8JjZcly3xU",
+      "url": "https://www.youtube.com/watch?v=F8JjZcly3xU",
+      "title": "Ahadadream | Mixmag Lab London",
+      "channel": "Mixmag",
+      "published": "2026-09-28T11:19:18.310Z",
+      "publishedApprox": true,
+      "durationMs": 3557000,
+      "tags": [
+        "mixmag",
+        "house",
+        "bass"
+      ],
+      "firstSeen": "2026-10-26T04:59:48.577Z"
+    },
+    {
+      "id": "yt:2ArDRhrWJ9A",
+      "source": "youtube",
+      "videoId": "2ArDRhrWJ9A",
+      "url": "https://www.youtube.com/watch?v=2ArDRhrWJ9A",
+      "title": "Diffrent | Live From Rinse Summer Series 2026",
+      "channel": "Rinse FM",
+      "published": "2026-09-28T11:19:17.723Z",
+      "publishedApprox": true,
+      "durationMs": 3477000,
+      "tags": [
+        "rinse",
+        "uk garage",
+        "bass"
+      ],
+      "firstSeen": "2026-10-26T04:59:48.577Z"
+    },
+    {
+      "id": "yt:wh48_eJQSXo",
+      "source": "youtube",
+      "videoId": "wh48_eJQSXo",
+      "url": "https://www.youtube.com/watch?v=wh48_eJQSXo",
+      "title": "Fold B2B cu.rve | Live From Rinse Summer Series 2026",
+      "channel": "Rinse FM",
+      "published": "2026-09-28T11:19:17.723Z",
+      "publishedApprox": true,
+      "durationMs": 3680000,
+      "tags": [
+        "rinse",
+        "uk garage",
+        "bass",
+        "jungle"
+      ],
+      "firstSeen": "2026-10-26T04:59:48.577Z"
+    },
+    {
+      "id": "yt:47n_uUW3zYU",
+      "source": "youtube",
+      "videoId": "47n_uUW3zYU",
+      "url": "https://www.youtube.com/watch?v=47n_uUW3zYU",
+      "title": "Savannah Blake with Jordan Stephens | Rinse FM",
+      "channel": "Rinse FM",
+      "published": "2026-09-28T11:19:17.723Z",
+      "publishedApprox": true,
+      "durationMs": 4462000,
+      "tags": [
+        "rinse",
+        "uk garage",
+        "bass"
+      ],
+      "firstSeen": "2026-10-26T04:59:48.577Z"
+    },
+    {
+      "id": "yt:h_QaPKlyPuI",
+      "source": "youtube",
+      "videoId": "h_QaPKlyPuI",
+      "url": "https://www.youtube.com/watch?v=h_QaPKlyPuI",
+      "title": "Roll Deep Podcast | Rinse FM",
+      "channel": "Rinse FM",
+      "published": "2026-09-28T11:19:17.723Z",
+      "publishedApprox": true,
+      "durationMs": 2972000,
+      "tags": [
+        "rinse",
+        "uk garage",
+        "bass"
+      ],
+      "firstSeen": "2026-10-26T04:59:48.577Z"
+    },
+    {
+      "id": "yt:XTbcSJbYTvE",
+      "source": "youtube",
+      "videoId": "XTbcSJbYTvE",
+      "url": "https://www.youtube.com/watch?v=XTbcSJbYTvE",
+      "title": "Rinse HQ149 | Boss Priester",
+      "channel": "Rinse FM",
+      "published": "2026-09-28T11:19:17.723Z",
+      "publishedApprox": true,
+      "durationMs": 3674000,
+      "tags": [
+        "rinse",
+        "uk garage",
+        "bass"
+      ],
+      "firstSeen": "2026-10-26T04:59:48.577Z"
+    },
+    {
+      "id": "yt:51jfSwVDPkQ",
+      "source": "youtube",
+      "videoId": "51jfSwVDPkQ",
+      "url": "https://www.youtube.com/watch?v=51jfSwVDPkQ",
+      "title": "bullet tooth B2B INSTINCT | Rinse FM",
+      "channel": "Rinse FM",
+      "published": "2026-09-28T11:19:17.723Z",
+      "publishedApprox": true,
+      "durationMs": 3570000,
+      "tags": [
+        "rinse",
+        "uk garage",
+        "bass"
+      ],
+      "firstSeen": "2026-10-26T04:59:48.577Z"
+    },
+    {
+      "id": "yt:FDtWjKed5y8",
+      "source": "youtube",
+      "videoId": "FDtWjKed5y8",
+      "url": "https://www.youtube.com/watch?v=FDtWjKed5y8",
+      "title": "Roll Deep | Rinse FM",
+      "channel": "Rinse FM",
+      "published": "2026-09-28T11:19:17.723Z",
+      "publishedApprox": true,
+      "durationMs": 1443000,
+      "tags": [
+        "rinse",
+        "uk garage",
+        "bass"
+      ],
+      "firstSeen": "2026-10-26T04:59:48.577Z"
+    },
+    {
+      "id": "yt:QTffBkMBN_Y",
+      "source": "youtube",
+      "videoId": "QTffBkMBN_Y",
+      "url": "https://www.youtube.com/watch?v=QTffBkMBN_Y",
+      "title": "Wata Igarashi | Live From Rinse Summer Series 2026",
+      "channel": "Rinse FM",
+      "published": "2026-09-28T11:19:17.723Z",
+      "publishedApprox": true,
+      "durationMs": 3561000,
+      "tags": [
+        "rinse",
+        "uk garage",
+        "bass"
+      ],
+      "firstSeen": "2026-10-26T04:59:48.577Z"
+    },
+    {
+      "id": "yt:p1Azvr8FWMw",
+      "source": "youtube",
+      "videoId": "p1Azvr8FWMw",
+      "url": "https://www.youtube.com/watch?v=p1Azvr8FWMw",
+      "title": "DJ MARIA. | Rinse Live From Sónar 2026",
+      "channel": "Rinse FM",
+      "published": "2026-09-28T11:19:17.723Z",
+      "publishedApprox": true,
+      "durationMs": 4092000,
+      "tags": [
+        "rinse",
+        "uk garage",
+        "bass"
+      ],
+      "firstSeen": "2026-10-26T04:59:48.577Z"
+    },
+    {
+      "id": "yt:df1DZ1mBd5Y",
+      "source": "youtube",
+      "videoId": "df1DZ1mBd5Y",
+      "url": "https://www.youtube.com/watch?v=df1DZ1mBd5Y",
+      "title": "ISA | Rinse Live From Sónar 2026",
+      "channel": "Rinse FM",
+      "published": "2026-09-28T11:19:17.723Z",
+      "publishedApprox": true,
+      "durationMs": 3575000,
+      "tags": [
+        "rinse",
+        "uk garage",
+        "bass"
+      ],
+      "firstSeen": "2026-10-26T04:59:48.577Z"
+    },
+    {
+      "id": "yt:IW4Fy1x0fsM",
+      "source": "youtube",
+      "videoId": "IW4Fy1x0fsM",
+      "url": "https://www.youtube.com/watch?v=IW4Fy1x0fsM",
+      "title": "Danielle B2B Ryan Elliott | Rinse Live From Sónar 2026",
+      "channel": "Rinse FM",
+      "published": "2026-09-28T11:19:17.723Z",
+      "publishedApprox": true,
+      "durationMs": 4337000,
+      "tags": [
+        "rinse",
+        "uk garage",
+        "bass"
+      ],
+      "firstSeen": "2026-10-26T04:59:48.577Z"
+    },
+    {
+      "id": "yt:WjwG5_ooxcM",
+      "source": "youtube",
+      "videoId": "WjwG5_ooxcM",
+      "url": "https://www.youtube.com/watch?v=WjwG5_ooxcM",
+      "title": "Rinse HQ148 | Papa Nugs B2B DJ ADHD B2B Jorg Kuning",
+      "channel": "Rinse FM",
+      "published": "2026-09-28T11:19:17.723Z",
+      "publishedApprox": true,
+      "durationMs": 3612000,
+      "tags": [
+        "rinse",
+        "uk garage",
+        "bass",
+        "jungle"
+      ],
+      "firstSeen": "2026-10-26T04:59:48.577Z"
+    },
+    {
+      "id": "yt:ex-mqFSe47A",
+      "source": "youtube",
+      "videoId": "ex-mqFSe47A",
+      "url": "https://www.youtube.com/watch?v=ex-mqFSe47A",
+      "title": "Rinse HQ151 | Lou Nour",
+      "channel": "Rinse FM",
+      "published": "2026-09-28T11:19:17.723Z",
+      "publishedApprox": true,
+      "durationMs": 3662000,
+      "tags": [
+        "rinse",
+        "uk garage",
+        "bass"
+      ],
+      "firstSeen": "2026-10-26T04:59:48.577Z"
+    },
+    {
+      "id": "yt:_s1SB54jreY",
+      "source": "youtube",
+      "videoId": "_s1SB54jreY",
+      "url": "https://www.youtube.com/watch?v=_s1SB54jreY",
+      "title": "Rinse HQ150 | Strath",
+      "channel": "Rinse FM",
+      "published": "2026-09-28T11:19:17.723Z",
+      "publishedApprox": true,
+      "durationMs": 3659000,
+      "tags": [
+        "rinse",
+        "uk garage",
+        "bass"
+      ],
+      "firstSeen": "2026-10-26T04:59:48.577Z"
+    },
+    {
+      "id": "yt:_WnvRWqFjQo",
+      "source": "youtube",
+      "videoId": "_WnvRWqFjQo",
+      "url": "https://www.youtube.com/watch?v=_WnvRWqFjQo",
+      "title": "X CLUB. with Jeshi | Rinse FM",
+      "channel": "Rinse FM",
+      "published": "2026-09-28T11:19:17.723Z",
+      "publishedApprox": true,
+      "durationMs": 7183000,
+      "tags": [
+        "rinse",
+        "uk garage",
+        "bass"
+      ],
+      "firstSeen": "2026-10-26T04:59:48.577Z"
+    },
+    {
+      "id": "yt:8lXV6NH3M_8",
+      "source": "youtube",
+      "videoId": "8lXV6NH3M_8",
+      "url": "https://www.youtube.com/watch?v=8lXV6NH3M_8",
+      "title": "Silencer with Scorcher, Chaos, Major, Blair, So Large & Reeya Rich | Rinse FM",
+      "channel": "Rinse FM",
+      "published": "2026-09-28T11:19:17.723Z",
+      "publishedApprox": true,
+      "durationMs": 1565000,
+      "tags": [
+        "rinse",
+        "uk garage",
+        "bass"
+      ],
+      "firstSeen": "2026-10-26T04:59:48.577Z"
+    },
+    {
+      "id": "yt:aC3N2NckHBQ",
+      "source": "youtube",
+      "videoId": "aC3N2NckHBQ",
+      "url": "https://www.youtube.com/watch?v=aC3N2NckHBQ",
+      "title": "Savannah Blake with Stonebwoy | Rinse FM",
+      "channel": "Rinse FM",
+      "published": "2026-09-28T11:19:17.723Z",
+      "publishedApprox": true,
+      "durationMs": 1784000,
+      "tags": [
+        "rinse",
+        "uk garage",
+        "bass"
+      ],
+      "firstSeen": "2026-10-26T04:59:48.577Z"
+    },
+    {
+      "id": "yt:djsItMOfCQA",
+      "source": "youtube",
+      "videoId": "djsItMOfCQA",
+      "url": "https://www.youtube.com/watch?v=djsItMOfCQA",
+      "title": "Basement Jaxx | Boiler Room: London",
+      "channel": "Boiler Room",
+      "published": "2026-09-28T11:19:16.504Z",
+      "publishedApprox": true,
+      "durationMs": 4309000,
+      "tags": [
+        "boiler room",
+        "house",
+        "bass"
+      ],
+      "firstSeen": "2026-10-26T04:59:48.577Z"
+    },
+    {
+      "id": "yt:iyTRz9JpYmE",
+      "source": "youtube",
+      "videoId": "iyTRz9JpYmE",
+      "url": "https://www.youtube.com/watch?v=iyTRz9JpYmE",
+      "title": "Riordan | Boiler Room: London",
+      "channel": "Boiler Room",
+      "published": "2026-09-28T11:19:16.504Z",
+      "publishedApprox": true,
+      "durationMs": 3507000,
+      "tags": [
+        "boiler room",
+        "house",
+        "bass"
+      ],
+      "firstSeen": "2026-10-26T04:59:48.577Z"
+    },
+    {
+      "id": "yt:60ifct5h78Q",
+      "source": "youtube",
+      "videoId": "60ifct5h78Q",
+      "url": "https://www.youtube.com/watch?v=60ifct5h78Q",
+      "title": "Yung Lean & Bladee | Boiler Room: London",
+      "channel": "Boiler Room",
+      "published": "2026-09-28T11:19:16.504Z",
+      "publishedApprox": true,
+      "durationMs": 3662000,
+      "tags": [
+        "boiler room",
+        "house",
+        "bass"
+      ],
+      "firstSeen": "2026-10-26T04:59:48.577Z"
+    },
+    {
+      "id": "yt:lCpWVli_SCA",
+      "source": "youtube",
+      "videoId": "lCpWVli_SCA",
+      "url": "https://www.youtube.com/watch?v=lCpWVli_SCA",
+      "title": "@nickcheo | Boiler Room: Ohio",
+      "channel": "Boiler Room",
+      "published": "2026-09-28T11:19:16.504Z",
+      "publishedApprox": true,
+      "durationMs": 4799000,
+      "tags": [
+        "boiler room",
+        "house",
+        "bass"
+      ],
+      "firstSeen": "2026-10-26T04:59:48.577Z"
+    },
+    {
+      "id": "yt:iGXpNRSSRz0",
+      "source": "youtube",
+      "videoId": "iGXpNRSSRz0",
+      "url": "https://www.youtube.com/watch?v=iGXpNRSSRz0",
+      "title": "The Muffin Man F2F Impulsive Behaviour | Boiler Room: London",
+      "channel": "Boiler Room",
+      "published": "2026-09-28T11:19:16.504Z",
+      "publishedApprox": true,
+      "durationMs": 4424000,
+      "tags": [
+        "boiler room",
+        "house",
+        "bass"
+      ],
+      "firstSeen": "2026-10-26T04:59:48.577Z"
+    },
+    {
+      "id": "yt:mOYf1888G6Q",
+      "source": "youtube",
+      "videoId": "mOYf1888G6Q",
+      "url": "https://www.youtube.com/watch?v=mOYf1888G6Q",
+      "title": "Harriet Jaxxon | Boiler Room: London",
+      "channel": "Boiler Room",
+      "published": "2026-09-28T11:19:16.504Z",
+      "publishedApprox": true,
+      "durationMs": 3597000,
+      "tags": [
+        "boiler room",
+        "house",
+        "bass"
+      ],
+      "firstSeen": "2026-10-26T04:59:48.577Z"
     },
     {
       "id": "yt:okIv1rV2DBw",
@@ -5113,260 +6062,6 @@
       "firstSeen": "2026-10-27T10:32:50.151Z"
     },
     {
-      "id": "yt:1I53sJs24Is",
-      "source": "youtube",
-      "videoId": "1I53sJs24Is",
-      "url": "https://www.youtube.com/watch?v=1I53sJs24Is",
-      "title": "Ewan McVicar DJ Set - Creamfields: APEX 2026 | @beatport",
-      "channel": "Beatport and 2 more",
-      "published": "2026-09-27T10:32:13.272Z",
-      "publishedApprox": true,
-      "durationMs": 5266000,
-      "tags": [
-        "ewan mcvicar",
-        "house"
-      ],
-      "firstSeen": "2026-10-26T05:06:50.660Z"
-    },
-    {
-      "id": "yt:9Xz78hki8Ig",
-      "source": "youtube",
-      "videoId": "9Xz78hki8Ig",
-      "url": "https://www.youtube.com/watch?v=9Xz78hki8Ig",
-      "title": "Salute - All Night Long San Francisco set (5hr)",
-      "channel": "Blazer",
-      "published": "2026-09-27T10:32:10.476Z",
-      "publishedApprox": true,
-      "durationMs": 17794000,
-      "tags": [
-        "salute",
-        "dance"
-      ],
-      "firstSeen": "2026-10-26T11:05:58.433Z"
-    },
-    {
-      "id": "yt:KgZMEcx9mZw",
-      "source": "youtube",
-      "videoId": "KgZMEcx9mZw",
-      "url": "https://www.youtube.com/watch?v=KgZMEcx9mZw",
-      "title": "Main Phase - '95 to '05 House Special | RA Greenhouse Sessions",
-      "channel": "Resident Advisor and AlphaTheta / Pioneer DJ Global",
-      "published": "2026-09-27T10:32:07.447Z",
-      "publishedApprox": true,
-      "durationMs": 4767000,
-      "tags": [
-        "main phase",
-        "uk garage",
-        "house"
-      ],
-      "firstSeen": "2026-10-26T05:06:50.660Z"
-    },
-    {
-      "id": "yt:_r-mWYZQ660",
-      "source": "youtube",
-      "videoId": "_r-mWYZQ660",
-      "url": "https://www.youtube.com/watch?v=_r-mWYZQ660",
-      "title": "Sammy Virji B2B Barry Can't Swim at Ally Pally",
-      "channel": "Sammy Virji and Barry Can't Swim",
-      "published": "2026-09-27T10:31:59.552Z",
-      "publishedApprox": true,
-      "durationMs": 1932000,
-      "tags": [
-        "sammy virji",
-        "uk garage",
-        "barry cant swim",
-        "house",
-        "jungle"
-      ],
-      "firstSeen": "2026-10-26T04:59:48.578Z"
-    },
-    {
-      "id": "yt:Uv1H5AxpxXA",
-      "source": "youtube",
-      "videoId": "Uv1H5AxpxXA",
-      "url": "https://www.youtube.com/watch?v=Uv1H5AxpxXA",
-      "title": "KETTAMA - Reading Festival * Little John's Farm, Reading, UK (Aug 30, 2026 / AUDIO)",
-      "channel": "unrealmedia * spanish",
-      "published": "2026-09-27T10:31:41.745Z",
-      "publishedApprox": true,
-      "durationMs": 5014000,
-      "tags": [
-        "kettama",
-        "house"
-      ],
-      "firstSeen": "2026-10-26T05:06:50.660Z"
-    },
-    {
-      "id": "yt:pIziPTX9er4",
-      "source": "youtube",
-      "videoId": "pIziPTX9er4",
-      "url": "https://www.youtube.com/watch?v=pIziPTX9er4",
-      "title": "Daniel Avery @TheLotRadio 09-22-2026",
-      "channel": "The Lot Radio",
-      "published": "2026-09-27T10:31:36.624Z",
-      "publishedApprox": true,
-      "durationMs": 3539000,
-      "tags": [
-        "the lot radio",
-        "house"
-      ],
-      "firstSeen": "2026-10-26T04:59:48.578Z"
-    },
-    {
-      "id": "yt:F9MJy2mp-Ak",
-      "source": "youtube",
-      "videoId": "F9MJy2mp-Ak",
-      "url": "https://www.youtube.com/watch?v=F9MJy2mp-Ak",
-      "title": "Beyond the Call-Out: Conflict, Harm & Resolution in Nightlife | Beyond the Dancefloor 2026",
-      "channel": "The Lot Radio",
-      "published": "2026-09-27T10:31:36.624Z",
-      "publishedApprox": true,
-      "durationMs": 5826000,
-      "tags": [
-        "the lot radio",
-        "house",
-        "dance"
-      ],
-      "firstSeen": "2026-10-26T04:59:48.578Z"
-    },
-    {
-      "id": "yt:ZhIX0dOy9LY",
-      "source": "youtube",
-      "videoId": "ZhIX0dOy9LY",
-      "url": "https://www.youtube.com/watch?v=ZhIX0dOy9LY",
-      "title": "Jenn Getz | Mixmag Lab London",
-      "channel": "Mixmag",
-      "published": "2026-09-27T10:31:35.324Z",
-      "publishedApprox": true,
-      "durationMs": 3648000,
-      "tags": [
-        "mixmag",
-        "house",
-        "bass"
-      ],
-      "firstSeen": "2026-10-26T04:59:48.577Z"
-    },
-    {
-      "id": "yt:Gc5X1r_naXU",
-      "source": "youtube",
-      "videoId": "Gc5X1r_naXU",
-      "url": "https://www.youtube.com/watch?v=Gc5X1r_naXU",
-      "title": "La La | Mixmag Lab London x Cupra",
-      "channel": "Mixmag",
-      "published": "2026-09-27T10:31:35.324Z",
-      "publishedApprox": true,
-      "durationMs": 3545000,
-      "tags": [
-        "mixmag",
-        "house",
-        "bass"
-      ],
-      "firstSeen": "2026-10-26T04:59:48.577Z"
-    },
-    {
-      "id": "yt:wwN6Fl2Ba5w",
-      "source": "youtube",
-      "videoId": "wwN6Fl2Ba5w",
-      "url": "https://www.youtube.com/watch?v=wwN6Fl2Ba5w",
-      "title": "Mozey d'n'b set | SAFE&SOUND x Burn Energy Tour | Bucharest",
-      "channel": "Mixmag",
-      "published": "2026-09-27T10:31:35.324Z",
-      "publishedApprox": true,
-      "durationMs": 3620000,
-      "tags": [
-        "mixmag",
-        "house",
-        "bass"
-      ],
-      "firstSeen": "2026-10-26T04:59:48.577Z"
-    },
-    {
-      "id": "yt:fjR4idz1-MA",
-      "source": "youtube",
-      "videoId": "fjR4idz1-MA",
-      "url": "https://www.youtube.com/watch?v=fjR4idz1-MA",
-      "title": "Dr Banana | Det Gode Selskab x Burn Energy Tour x Mixmag | Norway",
-      "channel": "Mixmag",
-      "published": "2026-09-27T10:31:35.324Z",
-      "publishedApprox": true,
-      "durationMs": 5106000,
-      "tags": [
-        "mixmag",
-        "house",
-        "bass"
-      ],
-      "firstSeen": "2026-10-26T04:59:48.577Z"
-    },
-    {
-      "id": "yt:xJR7q0XN8oU",
-      "source": "youtube",
-      "videoId": "xJR7q0XN8oU",
-      "url": "https://www.youtube.com/watch?v=xJR7q0XN8oU",
-      "title": "Hot Since 82 | Mixmag Lab London",
-      "channel": "Mixmag",
-      "published": "2026-09-27T10:31:35.324Z",
-      "publishedApprox": true,
-      "durationMs": 7370000,
-      "tags": [
-        "mixmag",
-        "house",
-        "bass"
-      ],
-      "firstSeen": "2026-10-26T04:59:48.577Z"
-    },
-    {
-      "id": "yt:F8JjZcly3xU",
-      "source": "youtube",
-      "videoId": "F8JjZcly3xU",
-      "url": "https://www.youtube.com/watch?v=F8JjZcly3xU",
-      "title": "Ahadadream | Mixmag Lab London",
-      "channel": "Mixmag",
-      "published": "2026-09-27T10:31:35.324Z",
-      "publishedApprox": true,
-      "durationMs": 3557000,
-      "tags": [
-        "mixmag",
-        "house",
-        "bass"
-      ],
-      "firstSeen": "2026-10-26T04:59:48.577Z"
-    },
-    {
-      "id": "yt:2ArDRhrWJ9A",
-      "source": "youtube",
-      "videoId": "2ArDRhrWJ9A",
-      "url": "https://www.youtube.com/watch?v=2ArDRhrWJ9A",
-      "title": "Diffrent | Live From Rinse Summer Series 2026",
-      "channel": "Rinse FM",
-      "published": "2026-09-27T10:31:34.757Z",
-      "publishedApprox": true,
-      "durationMs": 3477000,
-      "tags": [
-        "rinse",
-        "uk garage",
-        "bass"
-      ],
-      "firstSeen": "2026-10-26T04:59:48.577Z"
-    },
-    {
-      "id": "yt:wh48_eJQSXo",
-      "source": "youtube",
-      "videoId": "wh48_eJQSXo",
-      "url": "https://www.youtube.com/watch?v=wh48_eJQSXo",
-      "title": "Fold B2B cu.rve | Live From Rinse Summer Series 2026",
-      "channel": "Rinse FM",
-      "published": "2026-09-27T10:31:34.757Z",
-      "publishedApprox": true,
-      "durationMs": 3680000,
-      "tags": [
-        "rinse",
-        "uk garage",
-        "bass",
-        "jungle"
-      ],
-      "firstSeen": "2026-10-26T04:59:48.577Z"
-    },
-    {
       "id": "yt:fgK_TVa24gw",
       "source": "youtube",
       "videoId": "fgK_TVa24gw",
@@ -5376,262 +6071,6 @@
       "published": "2026-09-27T10:31:34.757Z",
       "publishedApprox": true,
       "durationMs": 3176000,
-      "tags": [
-        "rinse",
-        "uk garage",
-        "bass"
-      ],
-      "firstSeen": "2026-10-26T04:59:48.577Z"
-    },
-    {
-      "id": "yt:47n_uUW3zYU",
-      "source": "youtube",
-      "videoId": "47n_uUW3zYU",
-      "url": "https://www.youtube.com/watch?v=47n_uUW3zYU",
-      "title": "Savannah Blake with Jordan Stephens | Rinse FM",
-      "channel": "Rinse FM",
-      "published": "2026-09-27T10:31:34.756Z",
-      "publishedApprox": true,
-      "durationMs": 4462000,
-      "tags": [
-        "rinse",
-        "uk garage",
-        "bass"
-      ],
-      "firstSeen": "2026-10-26T04:59:48.577Z"
-    },
-    {
-      "id": "yt:h_QaPKlyPuI",
-      "source": "youtube",
-      "videoId": "h_QaPKlyPuI",
-      "url": "https://www.youtube.com/watch?v=h_QaPKlyPuI",
-      "title": "Roll Deep Podcast | Rinse FM",
-      "channel": "Rinse FM",
-      "published": "2026-09-27T10:31:34.756Z",
-      "publishedApprox": true,
-      "durationMs": 2972000,
-      "tags": [
-        "rinse",
-        "uk garage",
-        "bass"
-      ],
-      "firstSeen": "2026-10-26T04:59:48.577Z"
-    },
-    {
-      "id": "yt:XTbcSJbYTvE",
-      "source": "youtube",
-      "videoId": "XTbcSJbYTvE",
-      "url": "https://www.youtube.com/watch?v=XTbcSJbYTvE",
-      "title": "Rinse HQ149 | Boss Priester",
-      "channel": "Rinse FM",
-      "published": "2026-09-27T10:31:34.756Z",
-      "publishedApprox": true,
-      "durationMs": 3674000,
-      "tags": [
-        "rinse",
-        "uk garage",
-        "bass"
-      ],
-      "firstSeen": "2026-10-26T04:59:48.577Z"
-    },
-    {
-      "id": "yt:51jfSwVDPkQ",
-      "source": "youtube",
-      "videoId": "51jfSwVDPkQ",
-      "url": "https://www.youtube.com/watch?v=51jfSwVDPkQ",
-      "title": "bullet tooth B2B INSTINCT | Rinse FM",
-      "channel": "Rinse FM",
-      "published": "2026-09-27T10:31:34.756Z",
-      "publishedApprox": true,
-      "durationMs": 3570000,
-      "tags": [
-        "rinse",
-        "uk garage",
-        "bass"
-      ],
-      "firstSeen": "2026-10-26T04:59:48.577Z"
-    },
-    {
-      "id": "yt:FDtWjKed5y8",
-      "source": "youtube",
-      "videoId": "FDtWjKed5y8",
-      "url": "https://www.youtube.com/watch?v=FDtWjKed5y8",
-      "title": "Roll Deep | Rinse FM",
-      "channel": "Rinse FM",
-      "published": "2026-09-27T10:31:34.756Z",
-      "publishedApprox": true,
-      "durationMs": 1443000,
-      "tags": [
-        "rinse",
-        "uk garage",
-        "bass"
-      ],
-      "firstSeen": "2026-10-26T04:59:48.577Z"
-    },
-    {
-      "id": "yt:QTffBkMBN_Y",
-      "source": "youtube",
-      "videoId": "QTffBkMBN_Y",
-      "url": "https://www.youtube.com/watch?v=QTffBkMBN_Y",
-      "title": "Wata Igarashi | Live From Rinse Summer Series 2026",
-      "channel": "Rinse FM",
-      "published": "2026-09-27T10:31:34.756Z",
-      "publishedApprox": true,
-      "durationMs": 3561000,
-      "tags": [
-        "rinse",
-        "uk garage",
-        "bass"
-      ],
-      "firstSeen": "2026-10-26T04:59:48.577Z"
-    },
-    {
-      "id": "yt:p1Azvr8FWMw",
-      "source": "youtube",
-      "videoId": "p1Azvr8FWMw",
-      "url": "https://www.youtube.com/watch?v=p1Azvr8FWMw",
-      "title": "DJ MARIA. | Rinse Live From Sónar 2026",
-      "channel": "Rinse FM",
-      "published": "2026-09-27T10:31:34.756Z",
-      "publishedApprox": true,
-      "durationMs": 4092000,
-      "tags": [
-        "rinse",
-        "uk garage",
-        "bass"
-      ],
-      "firstSeen": "2026-10-26T04:59:48.577Z"
-    },
-    {
-      "id": "yt:df1DZ1mBd5Y",
-      "source": "youtube",
-      "videoId": "df1DZ1mBd5Y",
-      "url": "https://www.youtube.com/watch?v=df1DZ1mBd5Y",
-      "title": "ISA | Rinse Live From Sónar 2026",
-      "channel": "Rinse FM",
-      "published": "2026-09-27T10:31:34.756Z",
-      "publishedApprox": true,
-      "durationMs": 3575000,
-      "tags": [
-        "rinse",
-        "uk garage",
-        "bass"
-      ],
-      "firstSeen": "2026-10-26T04:59:48.577Z"
-    },
-    {
-      "id": "yt:IW4Fy1x0fsM",
-      "source": "youtube",
-      "videoId": "IW4Fy1x0fsM",
-      "url": "https://www.youtube.com/watch?v=IW4Fy1x0fsM",
-      "title": "Danielle B2B Ryan Elliott | Rinse Live From Sónar 2026",
-      "channel": "Rinse FM",
-      "published": "2026-09-27T10:31:34.756Z",
-      "publishedApprox": true,
-      "durationMs": 4337000,
-      "tags": [
-        "rinse",
-        "uk garage",
-        "bass"
-      ],
-      "firstSeen": "2026-10-26T04:59:48.577Z"
-    },
-    {
-      "id": "yt:WjwG5_ooxcM",
-      "source": "youtube",
-      "videoId": "WjwG5_ooxcM",
-      "url": "https://www.youtube.com/watch?v=WjwG5_ooxcM",
-      "title": "Rinse HQ148 | Papa Nugs B2B DJ ADHD B2B Jorg Kuning",
-      "channel": "Rinse FM",
-      "published": "2026-09-27T10:31:34.756Z",
-      "publishedApprox": true,
-      "durationMs": 3612000,
-      "tags": [
-        "rinse",
-        "uk garage",
-        "bass",
-        "jungle"
-      ],
-      "firstSeen": "2026-10-26T04:59:48.577Z"
-    },
-    {
-      "id": "yt:ex-mqFSe47A",
-      "source": "youtube",
-      "videoId": "ex-mqFSe47A",
-      "url": "https://www.youtube.com/watch?v=ex-mqFSe47A",
-      "title": "Rinse HQ151 | Lou Nour",
-      "channel": "Rinse FM",
-      "published": "2026-09-27T10:31:34.756Z",
-      "publishedApprox": true,
-      "durationMs": 3662000,
-      "tags": [
-        "rinse",
-        "uk garage",
-        "bass"
-      ],
-      "firstSeen": "2026-10-26T04:59:48.577Z"
-    },
-    {
-      "id": "yt:_s1SB54jreY",
-      "source": "youtube",
-      "videoId": "_s1SB54jreY",
-      "url": "https://www.youtube.com/watch?v=_s1SB54jreY",
-      "title": "Rinse HQ150 | Strath",
-      "channel": "Rinse FM",
-      "published": "2026-09-27T10:31:34.756Z",
-      "publishedApprox": true,
-      "durationMs": 3659000,
-      "tags": [
-        "rinse",
-        "uk garage",
-        "bass"
-      ],
-      "firstSeen": "2026-10-26T04:59:48.577Z"
-    },
-    {
-      "id": "yt:_WnvRWqFjQo",
-      "source": "youtube",
-      "videoId": "_WnvRWqFjQo",
-      "url": "https://www.youtube.com/watch?v=_WnvRWqFjQo",
-      "title": "X CLUB. with Jeshi | Rinse FM",
-      "channel": "Rinse FM",
-      "published": "2026-09-27T10:31:34.756Z",
-      "publishedApprox": true,
-      "durationMs": 7183000,
-      "tags": [
-        "rinse",
-        "uk garage",
-        "bass"
-      ],
-      "firstSeen": "2026-10-26T04:59:48.577Z"
-    },
-    {
-      "id": "yt:8lXV6NH3M_8",
-      "source": "youtube",
-      "videoId": "8lXV6NH3M_8",
-      "url": "https://www.youtube.com/watch?v=8lXV6NH3M_8",
-      "title": "Silencer with Scorcher, Chaos, Major, Blair, So Large & Reeya Rich | Rinse FM",
-      "channel": "Rinse FM",
-      "published": "2026-09-27T10:31:34.756Z",
-      "publishedApprox": true,
-      "durationMs": 1565000,
-      "tags": [
-        "rinse",
-        "uk garage",
-        "bass"
-      ],
-      "firstSeen": "2026-10-26T04:59:48.577Z"
-    },
-    {
-      "id": "yt:aC3N2NckHBQ",
-      "source": "youtube",
-      "videoId": "aC3N2NckHBQ",
-      "url": "https://www.youtube.com/watch?v=aC3N2NckHBQ",
-      "title": "Savannah Blake with Stonebwoy | Rinse FM",
-      "channel": "Rinse FM",
-      "published": "2026-09-27T10:31:34.756Z",
-      "publishedApprox": true,
-      "durationMs": 1784000,
       "tags": [
         "rinse",
         "uk garage",
@@ -5776,108 +6215,6 @@
       "firstSeen": "2026-10-26T04:59:48.577Z"
     },
     {
-      "id": "yt:djsItMOfCQA",
-      "source": "youtube",
-      "videoId": "djsItMOfCQA",
-      "url": "https://www.youtube.com/watch?v=djsItMOfCQA",
-      "title": "Basement Jaxx | Boiler Room: London",
-      "channel": "Boiler Room",
-      "published": "2026-09-27T10:31:33.572Z",
-      "publishedApprox": true,
-      "durationMs": 4309000,
-      "tags": [
-        "boiler room",
-        "house",
-        "bass"
-      ],
-      "firstSeen": "2026-10-26T04:59:48.577Z"
-    },
-    {
-      "id": "yt:iyTRz9JpYmE",
-      "source": "youtube",
-      "videoId": "iyTRz9JpYmE",
-      "url": "https://www.youtube.com/watch?v=iyTRz9JpYmE",
-      "title": "Riordan | Boiler Room: London",
-      "channel": "Boiler Room",
-      "published": "2026-09-27T10:31:33.572Z",
-      "publishedApprox": true,
-      "durationMs": 3507000,
-      "tags": [
-        "boiler room",
-        "house",
-        "bass"
-      ],
-      "firstSeen": "2026-10-26T04:59:48.577Z"
-    },
-    {
-      "id": "yt:60ifct5h78Q",
-      "source": "youtube",
-      "videoId": "60ifct5h78Q",
-      "url": "https://www.youtube.com/watch?v=60ifct5h78Q",
-      "title": "Yung Lean & Bladee | Boiler Room: London",
-      "channel": "Boiler Room",
-      "published": "2026-09-27T10:31:33.572Z",
-      "publishedApprox": true,
-      "durationMs": 3662000,
-      "tags": [
-        "boiler room",
-        "house",
-        "bass"
-      ],
-      "firstSeen": "2026-10-26T04:59:48.577Z"
-    },
-    {
-      "id": "yt:lCpWVli_SCA",
-      "source": "youtube",
-      "videoId": "lCpWVli_SCA",
-      "url": "https://www.youtube.com/watch?v=lCpWVli_SCA",
-      "title": "@nickcheo | Boiler Room: Ohio",
-      "channel": "Boiler Room",
-      "published": "2026-09-27T10:31:33.572Z",
-      "publishedApprox": true,
-      "durationMs": 4799000,
-      "tags": [
-        "boiler room",
-        "house",
-        "bass"
-      ],
-      "firstSeen": "2026-10-26T04:59:48.577Z"
-    },
-    {
-      "id": "yt:iGXpNRSSRz0",
-      "source": "youtube",
-      "videoId": "iGXpNRSSRz0",
-      "url": "https://www.youtube.com/watch?v=iGXpNRSSRz0",
-      "title": "The Muffin Man F2F Impulsive Behaviour | Boiler Room: London",
-      "channel": "Boiler Room",
-      "published": "2026-09-27T10:31:33.572Z",
-      "publishedApprox": true,
-      "durationMs": 4424000,
-      "tags": [
-        "boiler room",
-        "house",
-        "bass"
-      ],
-      "firstSeen": "2026-10-26T04:59:48.577Z"
-    },
-    {
-      "id": "yt:mOYf1888G6Q",
-      "source": "youtube",
-      "videoId": "mOYf1888G6Q",
-      "url": "https://www.youtube.com/watch?v=mOYf1888G6Q",
-      "title": "Harriet Jaxxon | Boiler Room: London",
-      "channel": "Boiler Room",
-      "published": "2026-09-27T10:31:33.572Z",
-      "publishedApprox": true,
-      "durationMs": 3597000,
-      "tags": [
-        "boiler room",
-        "house",
-        "bass"
-      ],
-      "firstSeen": "2026-10-26T04:59:48.577Z"
-    },
-    {
       "id": "yt:uxrlOdegEBo",
       "source": "youtube",
       "videoId": "uxrlOdegEBo",
@@ -5914,29 +6251,13 @@
       "firstSeen": "2026-10-26T05:06:50.661Z"
     },
     {
-      "id": "yt:muQs2r0n4Y4",
-      "source": "youtube",
-      "videoId": "muQs2r0n4Y4",
-      "url": "https://www.youtube.com/watch?v=muQs2r0n4Y4",
-      "title": "BBC Radio 1's Residency Silva Bumpa, Origins 2026 08 06",
-      "channel": "Wayne Stevens",
-      "published": "2026-08-28T10:32:48.648Z",
-      "publishedApprox": true,
-      "durationMs": 7259000,
-      "tags": [
-        "silva bumpa",
-        "uk garage"
-      ],
-      "firstSeen": "2026-10-26T05:04:53.134Z"
-    },
-    {
       "id": "yt:D03i0Y_y7ME",
       "source": "youtube",
       "videoId": "D03i0Y_y7ME",
       "url": "https://www.youtube.com/watch?v=D03i0Y_y7ME",
       "title": "UK Garage & House Mix | Overmono, Sammy Virji…",
       "channel": "Futa",
-      "published": "2026-08-28T10:32:36.520Z",
+      "published": "2026-08-29T11:20:20.343Z",
       "publishedApprox": true,
       "durationMs": 3270000,
       "tags": [
@@ -5949,13 +6270,29 @@
       "firstSeen": "2026-10-27T10:32:50.151Z"
     },
     {
+      "id": "yt:rMXESw6KWF4",
+      "source": "youtube",
+      "videoId": "rMXESw6KWF4",
+      "url": "https://www.youtube.com/watch?v=rMXESw6KWF4",
+      "title": "Overmono (2021) - Radio 1 Classic Essential Mix",
+      "channel": "JSnap Archives",
+      "published": "2026-08-29T11:20:20.343Z",
+      "publishedApprox": true,
+      "durationMs": 7201000,
+      "tags": [
+        "overmono",
+        "dance"
+      ],
+      "firstSeen": "2026-10-28T11:20:33.310Z"
+    },
+    {
       "id": "yt:P0LVdljfMIE",
       "source": "youtube",
       "videoId": "P0LVdljfMIE",
       "url": "https://www.youtube.com/watch?v=P0LVdljfMIE",
       "title": "Nia Archives - live at Lowlands 2026",
       "channel": "3voor12",
-      "published": "2026-08-28T10:32:30.780Z",
+      "published": "2026-08-29T11:20:14.431Z",
       "publishedApprox": true,
       "durationMs": 3624000,
       "tags": [
@@ -5971,7 +6308,7 @@
       "url": "https://www.youtube.com/watch?v=NfgBXb7fkRQ",
       "title": "Hamdi Ryder | themuddshow x Eddisco Records",
       "channel": "themuddshow",
-      "published": "2026-08-28T10:32:24.736Z",
+      "published": "2026-08-29T11:20:08.537Z",
       "publishedApprox": true,
       "durationMs": 3047000,
       "tags": [
@@ -5988,7 +6325,7 @@
       "url": "https://www.youtube.com/watch?v=wY6CC4I49lM",
       "title": "Josh Baker | Awakenings Festival 2026",
       "channel": "Awakenings",
-      "published": "2026-08-28T10:32:15.981Z",
+      "published": "2026-08-29T11:19:59.331Z",
       "publishedApprox": true,
       "durationMs": 7174000,
       "tags": [
@@ -6004,7 +6341,7 @@
       "url": "https://www.youtube.com/watch?v=BTKPuN5eMbc",
       "title": "DJsounds Show - Josh Baker",
       "channel": "DJsounds and Josh Baker",
-      "published": "2026-08-28T10:32:15.981Z",
+      "published": "2026-08-29T11:19:59.331Z",
       "publishedApprox": true,
       "durationMs": 4242000,
       "tags": [
@@ -6020,7 +6357,7 @@
       "url": "https://www.youtube.com/watch?v=T0ukRJ_snFg",
       "title": "Ewan McVicar • Live Mix 2026 • Hï Ibiza",
       "channel": "Hï Ibiza",
-      "published": "2026-08-28T10:32:13.272Z",
+      "published": "2026-08-29T11:19:56.267Z",
       "publishedApprox": true,
       "durationMs": 5401000,
       "tags": [
@@ -6036,7 +6373,7 @@
       "url": "https://www.youtube.com/watch?v=19E_I-AC-S4",
       "title": "Madonnina Sessions w/ salute｜2026年7月29日",
       "channel": "Room 303 Radio",
-      "published": "2026-08-28T10:32:10.476Z",
+      "published": "2026-08-29T11:19:53.504Z",
       "publishedApprox": true,
       "durationMs": 7129000,
       "tags": [
@@ -6046,13 +6383,45 @@
       "firstSeen": "2026-10-26T05:06:50.660Z"
     },
     {
+      "id": "yt:muQs2r0n4Y4",
+      "source": "youtube",
+      "videoId": "muQs2r0n4Y4",
+      "url": "https://www.youtube.com/watch?v=muQs2r0n4Y4",
+      "title": "BBC Radio 1's Residency Silva Bumpa, Origins 2026 08 06",
+      "channel": "Wayne Stevens",
+      "published": "2026-08-29T11:19:35.682Z",
+      "publishedApprox": true,
+      "durationMs": 7259000,
+      "tags": [
+        "silva bumpa",
+        "uk garage"
+      ],
+      "firstSeen": "2026-10-26T05:04:53.134Z"
+    },
+    {
+      "id": "yt:BUydxgg5Iy0",
+      "source": "youtube",
+      "videoId": "BUydxgg5Iy0",
+      "url": "https://www.youtube.com/watch?v=BUydxgg5Iy0",
+      "title": "BBC Radio 1's Residency Silva Bumpa Peak Time Energy 2026 08 20",
+      "channel": "Wayne Stevens",
+      "published": "2026-08-29T11:19:35.682Z",
+      "publishedApprox": true,
+      "durationMs": 7044000,
+      "tags": [
+        "silva bumpa",
+        "uk garage"
+      ],
+      "firstSeen": "2026-10-26T05:06:50.661Z"
+    },
+    {
       "id": "yt:MgiJWqoDnkU",
       "source": "youtube",
       "videoId": "MgiJWqoDnkU",
       "url": "https://www.youtube.com/watch?v=MgiJWqoDnkU",
       "title": "My DJ residency in Las Vegas VLOG",
       "channel": "Josh Baker",
-      "published": "2026-08-28T10:31:38.446Z",
+      "published": "2026-08-29T11:19:21.347Z",
       "publishedApprox": true,
       "durationMs": 1310000,
       "tags": [
@@ -6068,7 +6437,7 @@
       "url": "https://www.youtube.com/watch?v=4KujMc1gVRI",
       "title": "Papa Nugs | Mixmag Lab London",
       "channel": "Mixmag",
-      "published": "2026-08-28T10:31:35.324Z",
+      "published": "2026-08-29T11:19:18.310Z",
       "publishedApprox": true,
       "durationMs": 3546000,
       "tags": [
@@ -6085,7 +6454,7 @@
       "url": "https://www.youtube.com/watch?v=W2LZ3XUbUtA",
       "title": "Skyla Tylaa | Mixmag Lab London | AlphaTheta Takeover",
       "channel": "Mixmag",
-      "published": "2026-08-28T10:31:35.324Z",
+      "published": "2026-08-29T11:19:18.310Z",
       "publishedApprox": true,
       "durationMs": 3176000,
       "tags": [
@@ -6102,7 +6471,7 @@
       "url": "https://www.youtube.com/watch?v=j_Ys7J5HuFk",
       "title": "Biliguudei | Mixmag Lab Mongolia",
       "channel": "Mixmag",
-      "published": "2026-08-28T10:31:35.324Z",
+      "published": "2026-08-29T11:19:18.310Z",
       "publishedApprox": true,
       "durationMs": 3506000,
       "tags": [
@@ -6119,7 +6488,7 @@
       "url": "https://www.youtube.com/watch?v=6M-7FJYrmLg",
       "title": "Darius Syrossian | Mixmag Lab London",
       "channel": "Mixmag",
-      "published": "2026-08-28T10:31:35.324Z",
+      "published": "2026-08-29T11:19:18.310Z",
       "publishedApprox": true,
       "durationMs": 7315000,
       "tags": [
@@ -6136,7 +6505,7 @@
       "url": "https://www.youtube.com/watch?v=uPlMH7UPzsg",
       "title": "Nina Yamada | Mixmag Lab London",
       "channel": "Mixmag",
-      "published": "2026-08-28T10:31:35.324Z",
+      "published": "2026-08-29T11:19:18.310Z",
       "publishedApprox": true,
       "durationMs": 3538000,
       "tags": [
@@ -6153,7 +6522,7 @@
       "url": "https://www.youtube.com/watch?v=rksUAKnaLqA",
       "title": "Paula Tape | Mixmag Lab London",
       "channel": "Mixmag",
-      "published": "2026-08-28T10:31:35.324Z",
+      "published": "2026-08-29T11:19:18.310Z",
       "publishedApprox": true,
       "durationMs": 3716000,
       "tags": [
@@ -6170,7 +6539,7 @@
       "url": "https://www.youtube.com/watch?v=AjOQ_KEJkIo",
       "title": "Make A Dance | Mixmag Lab London",
       "channel": "Mixmag",
-      "published": "2026-08-28T10:31:35.324Z",
+      "published": "2026-08-29T11:19:18.310Z",
       "publishedApprox": true,
       "durationMs": 3531000,
       "tags": [
@@ -6178,6 +6547,23 @@
         "house",
         "bass",
         "dance"
+      ],
+      "firstSeen": "2026-10-26T04:59:48.577Z"
+    },
+    {
+      "id": "yt:LthSHee0sMc",
+      "source": "youtube",
+      "videoId": "LthSHee0sMc",
+      "url": "https://www.youtube.com/watch?v=LthSHee0sMc",
+      "title": "Chloë Robinson | Boiler Room: Nottingham",
+      "channel": "Boiler Room",
+      "published": "2026-08-29T11:19:16.504Z",
+      "publishedApprox": true,
+      "durationMs": 3002000,
+      "tags": [
+        "boiler room",
+        "house",
+        "bass"
       ],
       "firstSeen": "2026-10-26T04:59:48.577Z"
     },
@@ -6215,385 +6601,6 @@
         "bass"
       ],
       "firstSeen": "2026-10-26T04:59:48.577Z"
-    },
-    {
-      "id": "yt:sMfuGLUNTDs",
-      "source": "youtube",
-      "videoId": "sMfuGLUNTDs",
-      "url": "https://www.youtube.com/watch?v=sMfuGLUNTDs",
-      "title": "Jossy Mitsu | Galway | Keep Hush Live x FREAKSHOW",
-      "channel": "Keep Hush",
-      "published": "2026-08-28T10:31:34.135Z",
-      "publishedApprox": true,
-      "durationMs": 3480000,
-      "tags": [
-        "keep hush",
-        "uk garage",
-        "bass"
-      ],
-      "firstSeen": "2026-10-26T04:59:48.577Z"
-    },
-    {
-      "id": "yt:LthSHee0sMc",
-      "source": "youtube",
-      "videoId": "LthSHee0sMc",
-      "url": "https://www.youtube.com/watch?v=LthSHee0sMc",
-      "title": "Chloë Robinson | Boiler Room: Nottingham",
-      "channel": "Boiler Room",
-      "published": "2026-08-28T10:31:33.572Z",
-      "publishedApprox": true,
-      "durationMs": 3002000,
-      "tags": [
-        "boiler room",
-        "house",
-        "bass"
-      ],
-      "firstSeen": "2026-10-26T04:59:48.577Z"
-    },
-    {
-      "id": "yt:BUydxgg5Iy0",
-      "source": "youtube",
-      "videoId": "BUydxgg5Iy0",
-      "url": "https://www.youtube.com/watch?v=BUydxgg5Iy0",
-      "title": "BBC Radio 1's Residency Silva Bumpa Peak Time Energy 2026 08 20",
-      "channel": "Wayne Stevens",
-      "published": "2026-08-27T11:05:56.930Z",
-      "publishedApprox": true,
-      "durationMs": 7044000,
-      "tags": [
-        "silva bumpa",
-        "uk garage"
-      ],
-      "firstSeen": "2026-10-26T05:06:50.661Z"
-    },
-    {
-      "id": "yt:Y7Tw7GLc8JE",
-      "source": "youtube",
-      "videoId": "Y7Tw7GLc8JE",
-      "url": "https://www.youtube.com/watch?v=Y7Tw7GLc8JE",
-      "title": "DJ'ing COACHELLA",
-      "channel": "KETTAMA",
-      "published": "2026-08-27T05:02:17.605Z",
-      "publishedApprox": true,
-      "durationMs": 2217000,
-      "tags": [
-        "kettama",
-        "house"
-      ],
-      "firstSeen": "2026-10-26T05:04:53.134Z"
-    },
-    {
-      "id": "yt:nJT0NyGHAVA",
-      "source": "youtube",
-      "videoId": "nJT0NyGHAVA",
-      "url": "https://www.youtube.com/watch?v=nJT0NyGHAVA",
-      "title": "Silva Bumpa at Intercell x ATW 2026 | Full set",
-      "channel": "Intercell and Silva Bumpa",
-      "published": "2026-07-29T10:32:48.648Z",
-      "publishedApprox": true,
-      "durationMs": 5616000,
-      "tags": [
-        "silva bumpa",
-        "uk garage"
-      ],
-      "firstSeen": "2026-10-26T05:04:53.134Z"
-    },
-    {
-      "id": "yt:UE6wjxvMRz0",
-      "source": "youtube",
-      "videoId": "UE6wjxvMRz0",
-      "url": "https://www.youtube.com/watch?v=UE6wjxvMRz0",
-      "title": "Cloonee B2B Prospa - Live at Destino, Ibiza",
-      "channel": "Cloonee and Prospa",
-      "published": "2026-07-29T10:32:45.715Z",
-      "publishedApprox": true,
-      "durationMs": 5410000,
-      "tags": [
-        "prospa",
-        "dance"
-      ],
-      "firstSeen": "2026-10-26T05:04:53.134Z"
-    },
-    {
-      "id": "yt:l2KIMLYpCiU",
-      "source": "youtube",
-      "videoId": "l2KIMLYpCiU",
-      "url": "https://www.youtube.com/watch?v=l2KIMLYpCiU",
-      "title": "Prospa - Live from Circoloco DC-10 Ibiza (27.04.2026 Terrace)",
-      "channel": "CIRCOLOCO",
-      "published": "2026-07-29T10:32:45.715Z",
-      "publishedApprox": true,
-      "durationMs": 7148000,
-      "tags": [
-        "prospa",
-        "dance"
-      ],
-      "firstSeen": "2026-10-26T05:04:53.134Z"
-    },
-    {
-      "id": "yt:0sZF6YzhrRU",
-      "source": "youtube",
-      "videoId": "0sZF6YzhrRU",
-      "url": "https://www.youtube.com/watch?v=0sZF6YzhrRU",
-      "title": "Fred again.. & LATIN MAFIA - under the fabric (Mexico City, 11th December 2025)",
-      "channel": "Fred again . . and LATIN MAFIA",
-      "published": "2026-07-29T10:32:39.661Z",
-      "publishedApprox": true,
-      "durationMs": 2070000,
-      "tags": [
-        "fred again",
-        "dance"
-      ],
-      "firstSeen": "2026-10-26T11:05:58.433Z"
-    },
-    {
-      "id": "yt:01qjuSpFUY0",
-      "source": "youtube",
-      "videoId": "01qjuSpFUY0",
-      "url": "https://www.youtube.com/watch?v=01qjuSpFUY0",
-      "title": "Barry Can’t Swim DJ Set (Brooklyn, NYC - 20th June 2026)",
-      "channel": "Barry Can't Swim",
-      "published": "2026-07-29T10:32:27.807Z",
-      "publishedApprox": true,
-      "durationMs": 6760000,
-      "tags": [
-        "barry cant swim",
-        "house"
-      ],
-      "firstSeen": "2026-10-26T05:06:50.661Z"
-    },
-    {
-      "id": "yt:gV4fjf5rwh8",
-      "source": "youtube",
-      "videoId": "gV4fjf5rwh8",
-      "url": "https://www.youtube.com/watch?v=gV4fjf5rwh8",
-      "title": "Establish11 | Opening for Hamdi @ Quarters Brighton (Full DJ Set)",
-      "channel": "Establish11",
-      "published": "2026-07-29T10:32:24.736Z",
-      "publishedApprox": true,
-      "durationMs": 5392000,
-      "tags": [
-        "hamdi",
-        "bass"
-      ],
-      "firstSeen": "2026-10-26T05:06:50.661Z"
-    },
-    {
-      "id": "yt:9LroauyvyYY",
-      "source": "youtube",
-      "videoId": "9LroauyvyYY",
-      "url": "https://www.youtube.com/watch?v=9LroauyvyYY",
-      "title": "Chris Lake Live From Omnia Skybar Las Vegas (Official Full Set)",
-      "channel": "Chris Lake",
-      "published": "2026-07-29T10:32:19.210Z",
-      "publishedApprox": true,
-      "durationMs": 11169000,
-      "tags": [
-        "chris lake",
-        "house"
-      ],
-      "firstSeen": "2026-10-26T05:04:53.134Z"
-    },
-    {
-      "id": "yt:08DVU_-9ttg",
-      "source": "youtube",
-      "videoId": "08DVU_-9ttg",
-      "url": "https://www.youtube.com/watch?v=08DVU_-9ttg",
-      "title": "Ragie Ban Live from Los Angeles Historic Park 2026 (Chris Lake Support)",
-      "channel": "Ragie Ban",
-      "published": "2026-07-29T10:32:19.210Z",
-      "publishedApprox": true,
-      "durationMs": 5068000,
-      "tags": [
-        "chris lake",
-        "house"
-      ],
-      "firstSeen": "2026-10-26T11:05:58.433Z"
-    },
-    {
-      "id": "yt:U8JckN1KFbU",
-      "source": "youtube",
-      "videoId": "U8JckN1KFbU",
-      "url": "https://www.youtube.com/watch?v=U8JckN1KFbU",
-      "title": "Main Phase | Copenhagen, Denmark | Keep Hush Live x Fable x Inside",
-      "channel": "Keep Hush",
-      "published": "2026-07-29T10:32:07.447Z",
-      "publishedApprox": true,
-      "durationMs": 3802000,
-      "tags": [
-        "main phase",
-        "uk garage"
-      ],
-      "firstSeen": "2026-10-26T05:06:50.660Z"
-    },
-    {
-      "id": "yt:4GjVrM-OkEQ",
-      "source": "youtube",
-      "videoId": "4GjVrM-OkEQ",
-      "url": "https://www.youtube.com/watch?v=4GjVrM-OkEQ",
-      "title": "Conducta @TheLotRadio 07-6-2026",
-      "channel": "The Lot Radio",
-      "published": "2026-07-29T10:32:04.786Z",
-      "publishedApprox": true,
-      "durationMs": 3508000,
-      "tags": [
-        "conducta",
-        "uk garage"
-      ],
-      "firstSeen": "2026-10-26T05:04:53.134Z"
-    },
-    {
-      "id": "yt:rseeyi0pFq8",
-      "source": "youtube",
-      "videoId": "rseeyi0pFq8",
-      "url": "https://www.youtube.com/watch?v=rseeyi0pFq8",
-      "title": "Interplanetary Criminal at Paradise City 2026: Forest Stage Closing Set",
-      "channel": "Paradise City Festival and Interplanetary Criminal",
-      "published": "2026-07-29T10:32:02.188Z",
-      "publishedApprox": true,
-      "durationMs": 7142000,
-      "tags": [
-        "interplanetary criminal",
-        "uk garage"
-      ],
-      "firstSeen": "2026-10-26T05:06:50.660Z"
-    },
-    {
-      "id": "yt:MLQDWq03gNI",
-      "source": "youtube",
-      "videoId": "MLQDWq03gNI",
-      "url": "https://www.youtube.com/watch?v=MLQDWq03gNI",
-      "title": "Josh Baker and Prospa Shut Down Parklife..",
-      "channel": "Josh Baker",
-      "published": "2026-07-29T10:31:38.446Z",
-      "publishedApprox": true,
-      "durationMs": 1231000,
-      "tags": [
-        "josh baker",
-        "house",
-        "prospa",
-        "dance"
-      ],
-      "firstSeen": "2026-10-26T04:59:48.578Z"
-    },
-    {
-      "id": "yt:X8s7EKuVtBI",
-      "source": "youtube",
-      "videoId": "X8s7EKuVtBI",
-      "url": "https://www.youtube.com/watch?v=X8s7EKuVtBI",
-      "title": "Kyle Starkey | Mixmag Lab London",
-      "channel": "Mixmag",
-      "published": "2026-07-29T10:31:35.324Z",
-      "publishedApprox": true,
-      "durationMs": 3651000,
-      "tags": [
-        "mixmag",
-        "house",
-        "bass"
-      ],
-      "firstSeen": "2026-10-26T04:59:48.577Z"
-    },
-    {
-      "id": "yt:1ZzjenYQKxM",
-      "source": "youtube",
-      "videoId": "1ZzjenYQKxM",
-      "url": "https://www.youtube.com/watch?v=1ZzjenYQKxM",
-      "title": "Hannah Laing | Mixmag Lab London",
-      "channel": "Mixmag",
-      "published": "2026-07-29T10:31:35.324Z",
-      "publishedApprox": true,
-      "durationMs": 3595000,
-      "tags": [
-        "mixmag",
-        "house",
-        "bass"
-      ],
-      "firstSeen": "2026-10-26T04:59:48.577Z"
-    },
-    {
-      "id": "yt:ZNC1vkap2xY",
-      "source": "youtube",
-      "videoId": "ZNC1vkap2xY",
-      "url": "https://www.youtube.com/watch?v=ZNC1vkap2xY",
-      "title": "Bonobo | Mixmag Lab London",
-      "channel": "Mixmag",
-      "published": "2026-07-29T10:31:35.324Z",
-      "publishedApprox": true,
-      "durationMs": 5471000,
-      "tags": [
-        "mixmag",
-        "house",
-        "bass"
-      ],
-      "firstSeen": "2026-10-26T04:59:48.577Z"
-    },
-    {
-      "id": "yt:a76ks9SFBY8",
-      "source": "youtube",
-      "videoId": "a76ks9SFBY8",
-      "url": "https://www.youtube.com/watch?v=a76ks9SFBY8",
-      "title": "Shanti Celeste | Echo 7000 x Burn Energy Tour x Mixmag",
-      "channel": "Mixmag",
-      "published": "2026-07-29T10:31:35.324Z",
-      "publishedApprox": true,
-      "durationMs": 5292000,
-      "tags": [
-        "mixmag",
-        "house",
-        "bass"
-      ],
-      "firstSeen": "2026-10-26T04:59:48.577Z"
-    },
-    {
-      "id": "yt:x9SH9wDgw3g",
-      "source": "youtube",
-      "videoId": "x9SH9wDgw3g",
-      "url": "https://www.youtube.com/watch?v=x9SH9wDgw3g",
-      "title": "Femi Koleoso of Ezra Collective | Mixmag Lab London",
-      "channel": "Mixmag",
-      "published": "2026-07-29T10:31:35.324Z",
-      "publishedApprox": true,
-      "durationMs": 5169000,
-      "tags": [
-        "mixmag",
-        "house",
-        "bass"
-      ],
-      "firstSeen": "2026-10-26T05:04:53.134Z"
-    },
-    {
-      "id": "yt:ujzdQ-Zvlt8",
-      "source": "youtube",
-      "videoId": "ujzdQ-Zvlt8",
-      "url": "https://www.youtube.com/watch?v=ujzdQ-Zvlt8",
-      "title": "Kayzo | Mixmag Lab NYC",
-      "channel": "Mixmag",
-      "published": "2026-07-29T10:31:35.324Z",
-      "publishedApprox": true,
-      "durationMs": 7200000,
-      "tags": [
-        "mixmag",
-        "house",
-        "bass"
-      ],
-      "firstSeen": "2026-10-26T05:04:53.134Z"
-    },
-    {
-      "id": "yt:wjX24vg8Pdc",
-      "source": "youtube",
-      "videoId": "wjX24vg8Pdc",
-      "url": "https://www.youtube.com/watch?v=wjX24vg8Pdc",
-      "title": "Internet Girl | Boiler Room Soweto: Soweto Punk",
-      "channel": "Boiler Room",
-      "published": "2026-07-29T10:31:33.572Z",
-      "publishedApprox": true,
-      "durationMs": 3450000,
-      "tags": [
-        "boiler room",
-        "house",
-        "bass"
-      ],
-      "firstSeen": "2026-10-26T05:04:53.133Z"
     }
   ]
 }
